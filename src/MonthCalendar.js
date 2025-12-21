@@ -2,6 +2,7 @@ import React, { useState, useMemo } from "react";
 import { getTamilDate, getTamilMonthsInGregorianMonth, getPanchangamData, DAY_TYPES } from "./panchangamData";
 import { getRahukalamData } from "./rahukalam";
 
+
 // Import month images
 import januaryImg from "./assests/IMG-20250611-WA0085.jpg";
 import februaryImg from "./assests/IMG-20250531-WA0189(1).jpg"
@@ -15,6 +16,7 @@ import septemberImg from './assests/May_27_Vennaithali(1).jpg'
 import octoberImg from './assests/May_28_Kudurai_Mrg.jpg'
 import novemberImg from './assests/May_29_Therthavaari.jpg'
 import decemberImg from './assests/Dec_Month.jpg'
+import logo from './assests/sdk_logo.png'
 
 const MONTH_NAMES = [
     "January", "February", "March", "April", "May", "June",
@@ -143,14 +145,20 @@ const MonthCalendar = () => {
 
                 {/* Header with decorative leaves */}
                 <div className="relative pt-6 pb-2">
-                    <div className="absolute top-2 left-8 text-3xl">🍃</div>
-                    <div className="absolute top-2 right-8 text-3xl transform scale-x-[-1]">🍃</div>
-
-                    <h1 className="text-center text-4xl sm:text-5xl font-bold text-white drop-shadow-lg tracking-wider"
+                    {/* <div className="absolute top-2 left-8 text-3xl">🍃</div> */}
+                    {/* <div className="absolute top-2 right-8 text-3xl transform scale-x-[-1]">🍃</div> */}
+                    <div style={{margin:'0 auto', width: 'fit-content', display:"flex"}} className="">
+                        <img src={logo} alt="SDK Logo" width="40" />&nbsp;
+                        <span className="text-center inline-block"
+                            style={{ fontFamily: 'cursive', margin: 'auto', fontSize: '12px' }}>
+                            SRI DEVARAJAN KUZHUMAM - EMS
+                        </span>&nbsp;
+                        <img src={logo} alt="SDK Logo" width="40" />
+                    </div>
+                    {/* <h6 className="text-center text-xl sm:text-4xl font-bold text-white drop-shadow-lg tracking-wider"
                         style={{ fontFamily: 'cursive' }}>
-                        {/* {monthName.toUpperCase()} */}
                         SRI DEVARAJAN KUZHUMAM - EMS
-                    </h1>
+                    </h6> */}
                     {/* <p className="text-center text-white text-xl font-semibold">{currentYear}</p> */}
                 </div>
 
