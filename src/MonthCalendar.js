@@ -148,9 +148,10 @@ const MonthCalendar = () => {
 
                     <h1 className="text-center text-4xl sm:text-5xl font-bold text-white drop-shadow-lg tracking-wider"
                         style={{ fontFamily: 'cursive' }}>
-                        {monthName.toUpperCase()}
+                        {/* {monthName.toUpperCase()} */}
+                        SRI DEVARAJAN KUZHUMAM - EMS
                     </h1>
-                    <p className="text-center text-white text-xl font-semibold">{currentYear}</p>
+                    {/* <p className="text-center text-white text-xl font-semibold">{currentYear}</p> */}
                 </div>
 
                 {/* Side-by-Side Wrapper for MD+ screens */}
@@ -159,13 +160,12 @@ const MonthCalendar = () => {
                     {/* Left Column: Month Image (Desktop) / Top Section (Mobile) */}
                     <div className="md:w-5/12 lg:w-4/12 flex items-start justify-center">
                         {MONTH_IMAGES[currentMonth] && (
-                            <div className="w-full h-full max-w-[500px] md:max-w-none rounded-2xl overflow-hidden shadow-2xl border-8 border-white/20 transform transition hover:scale-[1.02] duration-500">
+                            <div className="w-full h-full max-w-[400px] md:max-w-none rounded-2xl overflow-hidden shadow-2xl border-8 border-white/20 transform transition hover:scale-[1.02] duration-500">
                                 <img
                                     src={MONTH_IMAGES[currentMonth]}
                                     alt={`${monthName} decoration`}
-                                    className="w-full object-cover md:h-full"
+                                    className="w-full object-cover h-[400px] md:h-[700px]"
                                     style={{
-                                        height: '500px',
                                         objectPosition: 'top',
                                         borderRadius: '12px'
                                     }}
@@ -186,7 +186,7 @@ const MonthCalendar = () => {
                                 ◀
                             </button>
                             <div className="flex flex-col items-center">
-                                <span className="text-white font-bold text-lg tracking-widest uppercase">Sri Deverajan Kuzhumam</span>
+                                <span className="text-white font-bold text-lg tracking-widest uppercase">{monthName.toUpperCase()} - {currentYear}</span>
                                 <div className="flex gap-1">
                                     {tamilMonths.map((tm, idx) => (
                                         <span key={idx} className="text-[10px] text-white/90 font-medium">
