@@ -351,7 +351,7 @@ const MonthCalendar = () => {
                                                 <img
                                                     src={selectedDate.panchangam.image}
                                                     alt="Event"
-                                                    className="w-[120px] h-[180px] md:w-[200px] md:h-[300px] object-cover"
+                                                    className="w-[120px] h-[180px] md:w-[200px] md:h-[300px] object-contain"
                                                 />
                                             </div>
                                         ) : (
