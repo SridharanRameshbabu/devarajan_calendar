@@ -147,7 +147,7 @@ const MonthCalendar = () => {
                 <div className="relative pt-6 pb-2">
                     {/* <div className="absolute top-2 left-8 text-3xl">🍃</div> */}
                     {/* <div className="absolute top-2 right-8 text-3xl transform scale-x-[-1]">🍃</div> */}
-                    <div style={{margin:'0 auto', width: 'fit-content', display:"flex"}} className="">
+                    <div style={{ margin: '0 auto', width: 'fit-content', display: "flex" }} className="">
                         <img src={logo} alt="SDK Logo" width="40" />&nbsp;
                         <span className="text-center inline-block"
                             style={{ fontFamily: 'cursive', margin: 'auto', fontSize: '12px' }}>
@@ -242,7 +242,7 @@ const MonthCalendar = () => {
                                                 ${getDayBackground(panchangam.dayType, isSelected)}`}
                                         >
                                             {/* Gregorian Date */}
-                                            <span className={`text-base sm:text-lg font-bold block ${isSunday ? 'text-red-600' : 'text-gray-800'}`}>
+                                            <span className={`text-base sm:text-lg font-bold block ${(isSunday || panchangam.isGovtHoliday) ? 'text-red-600' : 'text-gray-800'}`}>
                                                 {day}
                                             </span>
 
@@ -257,7 +257,7 @@ const MonthCalendar = () => {
                                     </span> */}
 
                                             {/* Tamil Date - positioned at bottom right */}
-                                            <span className={`absolute bottom-0.5 right-1 text-[14px] font-medium ${isSunday ? 'text-red-500' : 'text-gray-500'}`}>
+                                            <span className={`absolute bottom-0.5 right-1 text-[14px] font-medium ${(isSunday || panchangam.isGovtHoliday) ? 'text-red-500' : 'text-gray-500'}`}>
                                                 {tamilDate.day}
                                             </span>
 
@@ -269,7 +269,7 @@ const MonthCalendar = () => {
                                             )}
 
                                             {/* Event indicator with first event name */}
-                                            {panchangam.events && panchangam.events.length > 0 && !panchangam.image && (
+                                            {panchangam.events && panchangam.events.length > 0 && !panchangam.isGovtHoliday && !panchangam.image && (
                                                 <span className="absolute top-0.5 right-0.5 text-[10px]">🎉</span>
                                             )}
 

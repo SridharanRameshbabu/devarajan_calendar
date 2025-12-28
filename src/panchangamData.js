@@ -18,14 +18,47 @@ import day7 from './assests/May_26_Thirukallayanam(2).jpg'
 import day8 from './assests/May_27_Vennaithali(1).jpg'
 import day9 from './assests/May_28_Kudurai_Mrg.jpg'
 import day10 from './assests/May_29_Therthavaari.jpg'
-
+import day11 from './assests/IMG-20250611-WA0085.jpg'
+import day12 from './assests/May_31_kudurai.jpg'
+import day13 from './assests/Jun_1_Day_3.jpg'
+import day14 from './assests/Jun_2_Day_4.jpg'
+import day15 from './assests/Jun_3_Day_5.jpg'
+import day16 from './assests/Dec_Month.jpg'
 import masimagam from './assests/Aani_Kettai(S)_Sestaabhisegam.jpg'
-
 import ramanavami from './assests/Panguni_Navami(RamaNavami).jpg'
 import panguni_thirukalyanam from './assests/Panguni_Uthiram(S)_Thirukalyanan.jpg'
 import panguni_dhani from './assests/Panguni_Uthiram_D5.jpg'
 import tamilnewyear from './assests/Tamil_New_Year.jpg'
-import gajendra_motcham from './assests/Aavani(P)_Gajendra_Mocham.jpg'
+import gajendra_motcham from './assests/Gajendra Mokcham.jpg'
+
+//Pmk chithirai
+import pmk_day_1 from './assests/Pmk-day-1.jpg'
+import pmk_day_2 from './assests/Pmk-day-2.jpg'
+import pmk_day_3 from './assests/Pmk-day-3.jpg'
+import pmk_day_4 from './assests/Pmk-day-4.jpg'
+import pmk_day_5 from './assests/Pmk-day-5.jpg'
+import pmk_day_6 from './assests/Pmk-day-6.webp'
+import pmk_day_7 from './assests/Pmk-day-7.jpg'
+import pmk_day_8 from './assests/Pmk-day-8.jpg'
+import pmk_day_9 from './assests/Pmk-day-9.jpg'
+import pmk_day_10 from './assests/Pmk-day-10.jpg'
+
+//Pmk aadi
+import aadi1 from './assests/aadi1.jpg'
+import aadi2 from './assests/aadi2.jpg'
+import aadi3 from './assests/aadi3.jpg'
+import aadi4 from './assests/aadi4.jpg'
+import aadi5 from './assests/aadi5.jpg'
+import aadi6 from './assests/aadi6.jpg'
+import aadi7 from './assests/aadi7.jpg'
+import aadi8 from './assests/aadi8.jpg'
+// import aadi9 from './assests/aadi9.jpg'
+// import aadi10 from './assests/aadi10.jpg'
+
+import vijaya_dhasami from './assests/Vijayadhasami.jpg'
+
+import mandala_poojai from './assests/mandala abhisegam.jpg'
+import srivari_bajanai from './assests/mandala abhisegam.jpg'
 
 // Day types for color highlighting
 export const DAY_TYPES = {
@@ -33,6 +66,15 @@ export const DAY_TYPES = {
     AUSPICIOUS: "auspicious",          // Yellow highlight
     REGULAR: "regular"                  // No special highlight
 };
+
+export const GOVT_HOLIDAY_NAMES = [
+    "ஆங்கில புத்தாண்டு", "தை பொங்கல்", "மாட்டு பொங்கல்", "திருவள்ளுவர் தினம்",
+    "உழவர் திருநாள்", "குடியரசு தினம்", "தைப்பூசம்", "தெலுங்கு வருடப்பிறப்பு",
+    "ரம்ஜான்", "மகாவீர் ஜெயந்தி", "புனித வெள்ளி", "தமிழ் புத்தாண்டு",
+    "அம்பேத்கர் ஜெயந்தி", "மே தினம்", "பக்ரீத்", "முஹர்ரம்", "இந்திய சுதந்திர தினம்",
+    "மீலாத்-உன்-நபி", "கிருஷ்ண ஜெயந்தி", "விநாயகர் சதுர்த்தி", "காந்தி ஜெயந்தி",
+    "ஆயுத பூஜை", "விஜயதசமி", "தீபாவளி", "கிறிஸ்துமஸ்", "காணும் பொங்கல்"
+];
 
 // Helper to determine day type from events
 function getDayType(events) {
@@ -47,6 +89,7 @@ function getDayType(events) {
         "பௌர்ணமி", "அமாவாசை", "ஏகாதசி", "திருவள்ளுவர் தினம்"
     ];
 
+    if (events.some(e => GOVT_HOLIDAY_NAMES.includes(e))) return DAY_TYPES.MAJOR_FESTIVAL;
     if (events.some(e => majorFestivals.includes(e))) return DAY_TYPES.MAJOR_FESTIVAL;
     if (events.some(e => auspiciousEvents.includes(e))) return DAY_TYPES.AUSPICIOUS;
 
@@ -71,9 +114,9 @@ const JANUARY_2026_DATA = {
     14: { tamil_date: "மார்கழி 30", nakshatra: "அனுஷம்", tithi: "ஏகாதசி", events: ["போகி", "மகர சங்கராந்தி"] },
     15: { tamil_date: "தை 1", nakshatra: "கேட்டை", tithi: "துவாதசி", events: ["தை பொங்கல்"], image: vidai_atru },
     16: { tamil_date: "தை 2", nakshatra: "மூலம்", tithi: "த்ரயோதசி", events: ["மாட்டு பொங்கல்", "திருவள்ளுவர் தினம்"] },
-    17: { tamil_date: "தை 3", nakshatra: "மூலம்", tithi: "சதுர்த்தசி", events: ["காணும் பொங்கல்"] },
+    17: { tamil_date: "தை 3", nakshatra: "மூலம்", tithi: "சதுர்த்தசி", events: ["காணும் பொங்கல்", "உழவர் திருநாள்"] },
     18: { tamil_date: "தை 4", nakshatra: "பூராடம்", tithi: "அமாவாசை", events: ["அமாவாசை"] },
-    19: { tamil_date: "தை 5", nakshatra: "உத்திரட்டாதி", tithi: "பிரதமை", events: [] },
+    19: { tamil_date: "தை 5", nakshatra: "உத்திராடம்", tithi: "பிரதமை", events: [] },
     20: { tamil_date: "தை 6", nakshatra: "திருவோணம்", tithi: "துவிதியை", events: [] },
     21: { tamil_date: "தை 7", nakshatra: "அவிட்டம்", tithi: "த்ரிதியை", events: [] },
     22: { tamil_date: "தை 8", nakshatra: "சதயம்", tithi: "சதுர்த்தி", events: [] },
@@ -92,12 +135,13 @@ const JANUARY_2026_DATA = {
 Object.keys(JANUARY_2026_DATA).forEach(day => {
     const data = JANUARY_2026_DATA[day];
     data.dayType = getDayType(data.events);
+    data.isGovtHoliday = data.events.some(e => GOVT_HOLIDAY_NAMES.includes(e));
     data.festival = data.events.length > 0 ? data.events.join(", ") : null;
 });
 
 // February 2026 data from JSON with events
 const FEBRUARY_2026_DATA = {
-    1: { tamil_date: "தை 18", nakshatra: "பூசம்", tithi: "பௌர்ணமி", events: ["பௌர்ணமி"] },
+    1: { tamil_date: "தை 18", nakshatra: "பூசம்", tithi: "பௌர்ணமி", events: ["பௌர்ணமி", "தைப்பூசம்"] },
     2: { tamil_date: "தை 19", nakshatra: "ஆயில்யம்", tithi: "பிரதமை", events: [] },
     3: { tamil_date: "தை 20", nakshatra: "மகம்", tithi: "துவிதியை", events: [] },
     4: { tamil_date: "தை 21", nakshatra: "பூரம்", tithi: "த்ரிதியை", events: [] },
@@ -106,70 +150,35 @@ const FEBRUARY_2026_DATA = {
     7: { tamil_date: "தை 24", nakshatra: "சித்திரை", tithi: "ஷஷ்டி", events: [] },
     8: { tamil_date: "தை 25", nakshatra: "சுவாதி", tithi: "ஸப்தமி", events: [] },
     9: { tamil_date: "தை 26", nakshatra: "விசாகம்", tithi: "அஷ்டமி", events: [] },
-    10: { tamil_date: "தை 27", nakshatra: "அனுஷம்", tithi: "அஷ்டமி", events: [] },
-    11: { tamil_date: "தை 28", nakshatra: "கேட்டை", tithi: "நவமி", events: [] },
-    12: { tamil_date: "தை 29", nakshatra: "மூலம்", tithi: "தசமி", events: [] },
-    13: { tamil_date: "மாசி 1", nakshatra: "பூராடம்", tithi: "ஏகாதசி", events: ["மாசி மாதம் தொடக்கம்", "ஏகாதசி"] },
-    14: { tamil_date: "மாசி 2", nakshatra: "உத்திராடம்", tithi: "துவாதசி", events: ["வாலண்டைன்ஸ் டே"] },
-    15: { tamil_date: "மாசி 3", nakshatra: "திருவோணம்", tithi: "த்ரயோதசி", events: [] },
-    16: { tamil_date: "மாசி 4", nakshatra: "அவிட்டம்", tithi: "சதுர்த்தசி", events: ["மாத சிவராத்திரி"] },
-    17: { tamil_date: "மாசி 5", nakshatra: "சதயம்", tithi: "அமாவாசை", events: ["அமாவாசை"] },
-    18: { tamil_date: "மாசி 6", nakshatra: "பூரட்டாதி", tithi: "பிரதமை", events: [] },
-    19: { tamil_date: "மாசி 7", nakshatra: "உத்திரட்டாதி", tithi: "துவிதியை", events: [] },
-    20: { tamil_date: "மாசி 8", nakshatra: "ரேவதி", tithi: "த்ரிதியை", events: [] },
-    21: { tamil_date: "மாசி 9", nakshatra: "அஸ்வினி", tithi: "சதுர்த்தி", events: [] },
-    22: { tamil_date: "மாசி 10", nakshatra: "பரணி", tithi: "பஞ்சமி", events: [] },
-    23: { tamil_date: "மாசி 11", nakshatra: "கார்த்திகை", tithi: "ஷஷ்டி", events: [] },
-    24: { tamil_date: "மாசி 12", nakshatra: "ரோகிணி", tithi: "ஸப்தமி", events: [] },
-    25: { tamil_date: "மாசி 13", nakshatra: "திருவாதிரை", tithi: "நவமி", events: [] },
-    26: { tamil_date: "மாசி 14", nakshatra: "புனர்பூசம்", tithi: "தசமி", events: [] },
-    27: { tamil_date: "மாசி 15", nakshatra: "பூசம்", tithi: "ஏகாதசி", events: [] },
-    28: { tamil_date: "மாசி 16", nakshatra: "ஆயில்யம்", tithi: "துவாதசி", events: ["ஏகாதசி"] }
+    10: { tamil_date: "தை 27", nakshatra: "விசாகம்", tithi: "அஷ்டமி", events: [] },
+    11: { tamil_date: "தை 28", nakshatra: "அனுஷம்", tithi: "நவமி", events: [] },
+    12: { tamil_date: "தை 29", nakshatra: "கேட்டை", tithi: "தசமி", events: [] },
+    13: { tamil_date: "மாசி 1", nakshatra: "மூலம்", tithi: "ஏகாதசி", events: ["மாசி மாதம் தொடக்கம்", "ஏகாதசி"] },
+    14: { tamil_date: "மாசி 2", nakshatra: "பூராடம்", tithi: "துவாதசி", events: ["வாலண்டைன்ஸ் டே"] },
+    15: { tamil_date: "மாசி 3", nakshatra: "உத்திராடம்", tithi: "த்ரயோதசி", events: [] },
+    16: { tamil_date: "மாசி 4", nakshatra: "திருவோணம்", tithi: "சதுர்த்தசி", events: ["மாத சிவராத்திரி"] },
+    17: { tamil_date: "மாசி 5", nakshatra: "அவிட்டம்", tithi: "அமாவாசை", events: ["அமாவாசை"] },
+    18: { tamil_date: "மாசி 6", nakshatra: "சதயம்", tithi: "பிரதமை", events: [] },
+    19: { tamil_date: "மாசி 7", nakshatra: "பூரட்டாதி", tithi: "துவிதியை", events: [] },
+    20: { tamil_date: "மாசி 8", nakshatra: "உத்திரட்டாதி", tithi: "த்ரிதியை", events: [] },
+    21: { tamil_date: "மாசி 9", nakshatra: "ரேவதி", tithi: "சதுர்த்தி", events: [] },
+    22: { tamil_date: "மாசி 10", nakshatra: "அஸ்வினி", tithi: "பஞ்சமி", events: [] },
+    23: { tamil_date: "மாசி 11", nakshatra: "பரணி", tithi: "ஷஷ்டி", events: [] },
+    24: { tamil_date: "மாசி 12", nakshatra: "கார்த்திகை", tithi: "ஸப்தமி", events: [] },
+    25: { tamil_date: "மாசி 13", nakshatra: "ரோகிணி", tithi: "நவமி", events: [] },
+    26: { tamil_date: "மாசி 14", nakshatra: "மிருகசீரிடம்", tithi: "தசமி", events: [] },
+    27: { tamil_date: "மாசி 15", nakshatra: "திருவாதிரை", tithi: "ஏகாதசி", events: [] },
+    28: { tamil_date: "மாசி 16", nakshatra: "புனர்பூசம்", tithi: "துவாதசி", events: ["ஏகாதசி"] }
 };
-
-
 
 // Process February data
 Object.keys(FEBRUARY_2026_DATA).forEach(day => {
     const data = FEBRUARY_2026_DATA[day];
     data.dayType = getDayType(data.events);
+    data.isGovtHoliday = data.events.some(e => GOVT_HOLIDAY_NAMES.includes(e));
     data.festival = data.events.length > 0 ? data.events.join(", ") : null;
 });
 
-// March 2026 data from JSON with events
-// const MARCH_2026_DATA = {
-//     1: { tamil_date: "மாசி 16", nakshatra: "பூசம்", tithi: "சதுர்த்தசி", events: [] },
-//     2: { tamil_date: "மாசி 17", nakshatra: "ஆயில்யம்", tithi: "பௌர்ணமி", events: ["பௌர்ணமி"] },
-//     3: { tamil_date: "மாசி 18", nakshatra: "மகம்", tithi: "பிரதமை", events: [] },
-//     4: { tamil_date: "மாசி 19", nakshatra: "பூரம்", tithi: "த்விதியை", events: [] },
-//     5: { tamil_date: "மாசி 20", nakshatra: "உத்திரம்", tithi: "த்ரிதியை", events: [] },
-//     6: { tamil_date: "மாசி 21", nakshatra: "அஸ்தம்", tithi: "சதுர்த்தி", events: [] },
-//     7: { tamil_date: "மாசி 22", nakshatra: "சித்திரை", tithi: "பஞ்சமி", events: [] },
-//     8: { tamil_date: "மாசி 23", nakshatra: "சுவாதி", tithi: "ஷஷ்டி", events: [] },
-//     9: { tamil_date: "மாசி 24", nakshatra: "விசாகம்", tithi: "ஸப்தமி", events: [] },
-//     10: { tamil_date: "மாசி 25", nakshatra: "அனுஷம்", tithi: "அஷ்டமி", events: [] },
-//     11: { tamil_date: "மாசி 26", nakshatra: "கேட்டை", tithi: "நவமி", events: [] },
-//     12: { tamil_date: "மாசி 27", nakshatra: "மூலம்", tithi: "தசமி", events: [] },
-//     13: { tamil_date: "மாசி 28", nakshatra: "பூராடம்", tithi: "ஏகாதசி", events: ["ஏகாதசி"] },
-//     14: { tamil_date: "மாசி 29", nakshatra: "உத்திராடம்", tithi: "த்வாதசி", events: ["மாத சிவராத்திரி"] },
-//     15: { tamil_date: "பங்குனி 1", nakshatra: "திருவோணம்", tithi: "த்ரயோதசி", events: ["பங்குனி மாதம் தொடக்கம்"] },
-//     16: { tamil_date: "பங்குனி 2", nakshatra: "அவிட்டம்", tithi: "சதுர்த்தசி", events: [] },
-//     17: { tamil_date: "பங்குனி 3", nakshatra: "சதயம்", tithi: "அமாவாசை", events: ["அமாவாசை"] },
-//     18: { tamil_date: "பங்குனி 4", nakshatra: "பூரட்டாதி", tithi: "பிரதமை", events: [] },
-//     19: { tamil_date: "பங்குனி 5", nakshatra: "உத்திரட்டாதி", tithi: "த்விதியை", events: ["உகாதி"] },
-//     20: { tamil_date: "பங்குனி 6", nakshatra: "ரேவதி", tithi: "த்ரிதியை", events: [] },
-//     21: { tamil_date: "பங்குனி 7", nakshatra: "அஸ்வினி", tithi: "சதுர்த்தி", events: ["ரம்ஜான் (Eid-ul-Fitr)"] },
-//     22: { tamil_date: "பங்குனி 8", nakshatra: "பரணி", tithi: "பஞ்சமி", events: [] },
-//     23: { tamil_date: "பங்குனி 9", nakshatra: "கார்த்திகை", tithi: "ஷஷ்டி", events: [] },
-//     24: { tamil_date: "பங்குனி 10", nakshatra: "ரோகிணி", tithi: "ஸப்தமி", events: [] },
-//     25: { tamil_date: "பங்குனி 11", nakshatra: "திருவாதிரை", tithi: "அஷ்டமி", events: [] },
-//     26: { tamil_date: "பங்குனி 12", nakshatra: "புனர்பூசம்", tithi: "நவமி", events: [] },
-//     27: { tamil_date: "பங்குனி 13", nakshatra: "பூசம்", tithi: "தசமி", events: [] },
-//     28: { tamil_date: "பங்குனி 14", nakshatra: "ஆயில்யம்", tithi: "ஏகாதசி", events: ["ஏகாதசி"] },
-//     29: { tamil_date: "பங்குனி 15", nakshatra: "மகம்", tithi: "த்வாதசி", events: ["பங்குனி உத்திரம்"] },
-//     30: { tamil_date: "பங்குனி 16", nakshatra: "பூரம்", tithi: "த்ரயோதசி", events: [] },
-//     31: { tamil_date: "பங்குனி 17", nakshatra: "உத்திரம்", tithi: "சதுர்த்தசி", events: ["மகாவீர் ஜெயந்தி"] }
-// };
 
 const MARCH_2026_DATA = {
     1: { tamil_date: "மாசி 17", nakshatra: "பூசம்", tithi: "த்ரயோதசி", events: [] },
@@ -189,21 +198,21 @@ const MARCH_2026_DATA = {
 
     15: { tamil_date: "பங்குனி 1", nakshatra: "திருவோணம்", tithi: "துவாதசி", events: ["பங்குனி மாதம் தொடக்கம்"] },
     16: { tamil_date: "பங்குனி 2", nakshatra: "அவிட்டம்", tithi: "த்ரயோதசி", events: [] },
-    17: { tamil_date: "பங்குனி 3", nakshatra: "சதயம்", tithi: "சதுர்த்தசி", events: [] },
+    17: { tamil_date: "பங்குனி 3", nakshatra: "அவிட்டம்", tithi: "சதுர்த்தசி", events: [] },
     18: { tamil_date: "பங்குனி 4", nakshatra: "பூரட்டாதி", tithi: "அமாவாசை", events: ["அமாவாசை"] },
-    19: { tamil_date: "பங்குனி 5", nakshatra: "உத்திரட்டாதி", tithi: "பிரதமை", events: [] },
+    19: { tamil_date: "பங்குனி 5", nakshatra: "உத்திரட்டாதி", tithi: "பிரதமை", events: ["தெலுங்கு வருடப்பிறப்பு"] },
     20: { tamil_date: "பங்குனி 6", nakshatra: "ரேவதி", tithi: "துவிதியை", events: [] },
-    21: { tamil_date: "பங்குனி 7", nakshatra: "அஸ்வினி", tithi: "த்ரிதியை", events: [] },
+    21: { tamil_date: "பங்குனி 7", nakshatra: "அஸ்வினி", tithi: "த்ரிதியை", events: ["ரம்ஜான்"] },
     22: { tamil_date: "பங்குனி 8", nakshatra: "பரணி", tithi: "சதுர்த்தி", events: [] },
     23: { tamil_date: "பங்குனி 9", nakshatra: "கார்த்திகை", tithi: "பஞ்சமி", events: [] },
     24: { tamil_date: "பங்குனி 10", nakshatra: "ரோகிணி", tithi: "ஷஷ்டி", events: [] },
-    25: { tamil_date: "பங்குனி 11", nakshatra: "திருவாதிரை", tithi: "ஸப்தமி", events: [] },
-    26: { tamil_date: "பங்குனி 12", nakshatra: "புனர்பூசம்", tithi: "அஷ்டமி", events: [] },
-    27: { tamil_date: "பங்குனி 13", nakshatra: "பூசம்", tithi: "நவமி", events: [] },
-    28: { tamil_date: "பங்குனி 14", nakshatra: "ஆயில்யம்", tithi: "தசமி", events: [] },
-    29: { tamil_date: "பங்குனி 15", nakshatra: "மகம்", tithi: "ஏகாதசி", events: ["ஏகாதசி"] },
-    30: { tamil_date: "பங்குனி 16", nakshatra: "பூரம்", tithi: "துவாதசி", events: [] },
-    31: { tamil_date: "பங்குனி 17", nakshatra: "உத்திரம்", tithi: "த்ரயோதசி", events: [] }
+    25: { tamil_date: "பங்குனி 11", nakshatra: "மிருகசீரிடம்", tithi: "ஸப்தமி", events: [] },
+    26: { tamil_date: "பங்குனி 12", nakshatra: "திருவாதிரை", tithi: "அஷ்டமி", events: [] },
+    27: { tamil_date: "பங்குனி 13", nakshatra: "புனர்பூசம்", tithi: "நவமி", events: [] },
+    28: { tamil_date: "பங்குனி 14", nakshatra: "பூசம்", tithi: "தசமி", events: [] },
+    29: { tamil_date: "பங்குனி 15", nakshatra: "ஆயில்யம்", tithi: "ஏகாதசி", events: ["ஏகாதசி"] },
+    30: { tamil_date: "பங்குனி 16", nakshatra: "மகம்", tithi: "துவாதசி", events: [] },
+    31: { tamil_date: "பங்குனி 17", nakshatra: "பூரம்", tithi: "த்ரயோதசி", events: ["மகாவீர் ஜெயந்தி"] }
 };
 
 
@@ -212,6 +221,7 @@ const MARCH_2026_DATA = {
 Object.keys(MARCH_2026_DATA).forEach(day => {
     const data = MARCH_2026_DATA[day];
     data.dayType = getDayType(data.events);
+    data.isGovtHoliday = data.events.some(e => GOVT_HOLIDAY_NAMES.includes(e));
     data.festival = data.events.length > 0 ? data.events.join(", ") : null;
 });
 
@@ -219,33 +229,33 @@ Object.keys(MARCH_2026_DATA).forEach(day => {
 const APRIL_2026_DATA = {
     1: { tamil_date: "பங்குனி 18", nakshatra: "உத்திரம்", tithi: "சதுர்த்தசி", events: ["பௌர்ணமி விரதம்"] },
     2: { tamil_date: "பங்குனி 19", nakshatra: "அஸ்தம்", tithi: "பௌர்ணமி", events: ["பௌர்ணமி"] },
-    3: { tamil_date: "பங்குனி 20", nakshatra: "சித்திரை", tithi: "பிரதமை", events: ["நல்ல வெள்ளி"] },
+    3: { tamil_date: "பங்குனி 20", nakshatra: "சித்திரை", tithi: "பிரதமை", events: ["புனித வெள்ளி"] },
     4: { tamil_date: "பங்குனி 21", nakshatra: "சுவாதி", tithi: "த்விதியை", events: [] },
     5: { tamil_date: "பங்குனி 22", nakshatra: "விசாகம்", tithi: "த்ரிதியை", events: ["ஈஸ்டர்", "சங்கடஹர சதுர்த்தி"] },
     6: { tamil_date: "பங்குனி 23", nakshatra: "அனுஷம்", tithi: "சதுர்த்தி", events: [] },
     7: { tamil_date: "பங்குனி 24", nakshatra: "கேட்டை", tithi: "பஞ்சமி", events: [] },
     8: { tamil_date: "பங்குனி 25", nakshatra: "மூலம்", tithi: "ஷஷ்டி", events: ["ஷஷ்டி விரதம்"] },
-    9: { tamil_date: "பங்குனி 26", nakshatra: "பூராடம்", tithi: "ஸப்தமி", events: [] },
-    10: { tamil_date: "பங்குனி 27", nakshatra: "உத்திராடம்", tithi: "அஷ்டமி", events: [] },
-    11: { tamil_date: "பங்குனி 28", nakshatra: "திருவோணம்", tithi: "நவமி", events: [] },
-    12: { tamil_date: "பங்குனி 29", nakshatra: "அவிட்டம்", tithi: "தசமி", events: [] },
-    13: { tamil_date: "பங்குனி 30", nakshatra: "சதயம்", tithi: "ஏகாதசி", events: ["ஏகாதசி"] },
-    14: { tamil_date: "சித்திரை 1", nakshatra: "பூரட்டாதி", tithi: "த்வாதசி", events: ["தமிழ் புத்தாண்டு", "அம்பேத்கர் ஜெயந்தி"] },
-    15: { tamil_date: "சித்திரை 2", nakshatra: "உத்திரட்டாதி", tithi: "த்ரயோதசி", events: ["மாத சிவராத்திரி", "விஷு"] },
-    16: { tamil_date: "சித்திரை 3", nakshatra: "ரேவதி", tithi: "சதுர்த்தசி", events: [] },
-    17: { tamil_date: "சித்திரை 4", nakshatra: "அஸ்வினி", tithi: "அமாவாசை", events: ["அமாவாசை"] },
-    18: { tamil_date: "சித்திரை 5", nakshatra: "பரணி", tithi: "பிரதமை", events: [] },
-    19: { tamil_date: "சித்திரை 6", nakshatra: "கார்த்திகை", tithi: "த்விதியை", events: ["அக்ஷய திருதியை"] },
-    20: { tamil_date: "சித்திரை 7", nakshatra: "ரோகிணி", tithi: "த்ரிதியை", events: [] },
-    21: { tamil_date: "சித்திரை 8", nakshatra: "திருவாதிரை", tithi: "பஞ்சமி", events: ["சங்கர ஜெயந்தி"] },
-    22: { tamil_date: "சித்திரை 9", nakshatra: "புனர்பூசம்", tithi: "ஷஷ்டி", events: [] },
-    23: { tamil_date: "சித்திரை 10", nakshatra: "பூசம்", tithi: "ஸப்தமி", events: [] },
-    24: { tamil_date: "சித்திரை 11", nakshatra: "ஆயில்யம்", tithi: "அஷ்டமி", events: [] },
-    25: { tamil_date: "சித்திரை 12", nakshatra: "மகம்", tithi: "நவமி", events: [] },
-    26: { tamil_date: "சித்திரை 13", nakshatra: "பூரம்", tithi: "தசமி", events: [] },
-    27: { tamil_date: "சித்திரை 14", nakshatra: "பூரட்டாதி", tithi: "ஏகாதசி", events: ["ஏகாதசி", "மீனாட்சி திருக்கல்யாணம்"] },
-    28: { tamil_date: "சித்திரை 15", nakshatra: "உத்திரட்டாதி", tithi: "த்வாதசி", events: [] },
-    29: { tamil_date: "சித்திரை 16", nakshatra: "ரேவதி", tithi: "த்ரயோதசி", events: [] },
+    9: { tamil_date: "பங்குனி 26", nakshatra: "மூலம்", tithi: "ஸப்தமி", events: [] },
+    10: { tamil_date: "பங்குனி 27", nakshatra: "பூராடம்", tithi: "அஷ்டமி", events: [] },
+    11: { tamil_date: "பங்குனி 28", nakshatra: "உத்திராடம்", tithi: "நவமி", events: [] },
+    12: { tamil_date: "பங்குனி 29", nakshatra: "திருவோணம்", tithi: "தசமி", events: [] },
+    13: { tamil_date: "பங்குனி 30", nakshatra: "அவிட்டம்", tithi: "ஏகாதசி", events: ["ஏகாதசி"] },
+    14: { tamil_date: "சித்திரை 1", nakshatra: "சதயம்", tithi: "த்வாதசி", events: ["தமிழ் புத்தாண்டு", "அம்பேத்கர் ஜெயந்தி"] },
+    15: { tamil_date: "சித்திரை 2", nakshatra: "பூரட்டாதி", tithi: "த்ரயோதசி", events: ["மாத சிவராத்திரி", "விஷு"] },
+    16: { tamil_date: "சித்திரை 3", nakshatra: "உத்திரட்டாதி", tithi: "சதுர்த்தசி", events: [] },
+    17: { tamil_date: "சித்திரை 4", nakshatra: "ரேவதி", tithi: "அமாவாசை", events: ["அமாவாசை"] },
+    18: { tamil_date: "சித்திரை 5", nakshatra: "அஸ்வினி", tithi: "பிரதமை", events: [] },
+    19: { tamil_date: "சித்திரை 6", nakshatra: "பரணி", tithi: "த்விதியை", events: ["அக்ஷய திருதியை"] },
+    20: { tamil_date: "சித்திரை 7", nakshatra: "கார்த்திகை", tithi: "த்ரிதியை", events: [] },
+    21: { tamil_date: "சித்திரை 8", nakshatra: "மிருகசீரிடம்", tithi: "பஞ்சமி", events: ["சங்கர ஜெயந்தி"] },
+    22: { tamil_date: "சித்திரை 9", nakshatra: "திருவாதிரை", tithi: "ஷஷ்டி", events: [] },
+    23: { tamil_date: "சித்திரை 10", nakshatra: "புனர்பூசம்", tithi: "ஸப்தமி", events: [] },
+    24: { tamil_date: "சித்திரை 11", nakshatra: "பூசம்", tithi: "அஷ்டமி", events: [] },
+    25: { tamil_date: "சித்திரை 12", nakshatra: "ஆயில்யம்", tithi: "நவமி", events: [] },
+    26: { tamil_date: "சித்திரை 13", nakshatra: "மகம்", tithi: "தசமி", events: [] },
+    27: { tamil_date: "சித்திரை 14", nakshatra: "பூரம்", tithi: "ஏகாதசி", events: ["ஏகாதசி", "மீனாட்சி திருக்கல்யாணம்"] },
+    28: { tamil_date: "சித்திரை 15", nakshatra: "உத்திரம் ", tithi: "த்வாதசி", events: [] },
+    29: { tamil_date: "சித்திரை 16", nakshatra: "அஸ்தம்", tithi: "த்ரயோதசி", events: [] },
     30: { tamil_date: "சித்திரை 17", nakshatra: "சித்திரை", tithi: "சதுர்த்தசி", events: ["நரசிம்ம ஜெயந்தி"] }
 };
 
@@ -253,48 +263,52 @@ const APRIL_2026_DATA = {
 Object.keys(APRIL_2026_DATA).forEach(day => {
     const data = APRIL_2026_DATA[day];
     data.dayType = getDayType(data.events);
+    data.isGovtHoliday = data.events.some(e => GOVT_HOLIDAY_NAMES.includes(e));
     data.festival = data.events.length > 0 ? data.events.join(", ") : null;
 });
 
 // May 2026 data from JSON with events
+
 const MAY_2026_DATA = {
     1: { tamil_date: "சித்திரை 18", nakshatra: "ஸ்வாதி", tithi: "பௌர்ணமி", events: ["மே தினம்"] },
     2: { tamil_date: "சித்திரை 19", nakshatra: "விசாகம்", tithi: "பிரதமை", events: [] },
-    3: { tamil_date: "சித்திரை 20", nakshatra: "அனுஷம்", tithi: "த்விதியை", events: ["சங்கடஹர சதுர்த்தி"] },
-    4: { tamil_date: "சித்திரை 21", nakshatra: "கேட்டை", tithi: "த்ரிதியை", events: [] },
-    5: { tamil_date: "சித்திரை 22", nakshatra: "மூலம்", tithi: "சதுர்த்தி", events: [] },
-    6: { tamil_date: "சித்திரை 23", nakshatra: "பூராடம்", tithi: "சதுர்த்தி", events: ["ஷஷ்டி விரதம்"] },
-    7: { tamil_date: "சித்திரை 24", nakshatra: "உத்திராடம்", tithi: "பஞ்சமி", events: [] },
-    8: { tamil_date: "சித்திரை 25", nakshatra: "திருவோணம்", tithi: "பஞ்சமி", events: [] },
-    9: { tamil_date: "சித்திரை 26", nakshatra: "அவிட்டம்", tithi: "ஸப்தமி", events: [] },
-    10: { tamil_date: "சித்திரை 27", nakshatra: "சதயம்", tithi: "அஷ்டமி", events: [] },
-    11: { tamil_date: "சித்திரை 28", nakshatra: "பூரட்டாதி", tithi: "நவமி", events: ["ஏகாதசி"] },
-    12: { tamil_date: "சித்திரை 29", nakshatra: "உத்திரட்டாதி", tithi: "தசமி", events: [] },
-    13: { tamil_date: "சித்திரை 30", nakshatra: "ரேவதி", tithi: "ஏகாதசி", events: ["மாத சிவராத்திரி", "பிரதோஷம்"] },
-    14: { tamil_date: "சித்திரை 31", nakshatra: "அஸ்வினி", tithi: "த்வாதசி", events: ["வைகாசி மாதம் தொடக்கம்"] },
-    15: { tamil_date: "வைகாசி 1", nakshatra: "பரணி", tithi: "த்ரயோதசி", events: [] },
-    16: { tamil_date: "வைகாசி 2", nakshatra: "கார்த்திகை", tithi: "அமாவாசை", events: ["அமாவாசை"] },
-    17: { tamil_date: "வைகாசி 3", nakshatra: "ரோகிணி", tithi: "த்விதியை", events: [] },
-    18: { tamil_date: "வைகாசி 4", nakshatra: "மிருகசீரிடம்", tithi: "த்ரிதியை", events: [] },
-    19: { tamil_date: "வைகாசி 5", nakshatra: "திருவாதிரை", tithi: "சதுர்த்தி", events: ["சங்கடஹர சதுர்த்தி"] },
-    20: { tamil_date: "வைகாசி 6", nakshatra: "புனர்பூசம்", tithi: "பஞ்சமி", events: [] },
+    3: { tamil_date: "சித்திரை 20", nakshatra: "விசாகம்", tithi: "த்விதியை", events: ["சங்கடஹர சதுர்த்தி"] },
+    4: { tamil_date: "சித்திரை 21", nakshatra: "அனுஷம்", tithi: "த்ரிதியை", events: [] },
+    5: { tamil_date: "சித்திரை 22", nakshatra: "கேட்டை", tithi: "சதுர்த்தி", events: [] },
+    6: { tamil_date: "சித்திரை 23", nakshatra: "மூலம்", tithi: "சதுர்த்தி", events: ["ஷஷ்டி விரதம்"] },
+    7: { tamil_date: "சித்திரை 24", nakshatra: "பூராடம்", tithi: "பஞ்சமி", events: [] },
+    8: { tamil_date: "சித்திரை 25", nakshatra: "உத்திராடம்", tithi: "பஞ்சமி", events: [] },
+    9: { tamil_date: "சித்திரை 26", nakshatra: "திருவோணம்", tithi: "ஸப்தமி", events: [] },
+    10: { tamil_date: "சித்திரை 27", nakshatra: "அவிட்டம்", tithi: "அஷ்டமி", events: [] },
+    11: { tamil_date: "சித்திரை 28", nakshatra: "சதயம்", tithi: "நவமி", events: ["ஏகாதசி"] },
+    12: { tamil_date: "சித்திரை 29", nakshatra: "பூரட்டாதி", tithi: "தசமி", events: [] },
+    13: { tamil_date: "சித்திரை 30", nakshatra: "உத்திரட்டாதி", tithi: "ஏகாதசி", events: ["மாத சிவராத்திரி", "பிரதோஷம்"] },
+    14: { tamil_date: "சித்திரை 31", nakshatra: "ரேவதி", tithi: "த்வாதசி", events: ["வைகாசி மாதம் தொடக்கம்"] },
+    15: { tamil_date: "வைகாசி 1", nakshatra: "அஸ்வினி", tithi: "த்ரயோதசி", events: [] },
+    16: { tamil_date: "வைகாசி 2", nakshatra: "பரணி", tithi: "அமாவாசை", events: ["அமாவாசை"] },
+    17: { tamil_date: "வைகாசி 3", nakshatra: "கார்த்திகை", tithi: "த்விதியை", events: [] },
+    18: { tamil_date: "வைகாசி 4", nakshatra: "ரோகிணி", tithi: "த்ரிதியை", events: [] },
+    19: { tamil_date: "வைகாசி 5", nakshatra: "மிருகசீரிடம்", tithi: "சதுர்த்தி", events: ["சங்கடஹர சதுர்த்தி"] },
+    20: { tamil_date: "வைகாசி 6", nakshatra: "திருவாதிரை", tithi: "பஞ்சமி", events: [] },
     21: { tamil_date: "வைகாசி 7", nakshatra: "பூசம்", tithi: "ஷஷ்டி", events: ["ஷஷ்டி விரதம்"] },
     22: { tamil_date: "வைகாசி 8", nakshatra: "ஆயில்யம்", tithi: "ஸப்தமி", events: ["வைகாசி விசாகம்"] },
     23: { tamil_date: "வைகாசி 9", nakshatra: "மகம்", tithi: "அஷ்டமி", events: [] },
     24: { tamil_date: "வைகாசி 10", nakshatra: "பூரம்", tithi: "நவமி", events: [] },
     25: { tamil_date: "வைகாசி 11", nakshatra: "உத்திரம்", tithi: "தசமி", events: [] },
     26: { tamil_date: "வைகாசி 12", nakshatra: "அஸ்தம்", tithi: "ஏகாதசி", events: ["ஏகாதசி"] },
-    27: { tamil_date: "வைகாசி 13", nakshatra: "சித்திரை", tithi: "த்வாதசி", events: [] },
-    28: { tamil_date: "வைகாசி 14", nakshatra: "சுவாதி", tithi: "த்ரயோதசி", events: ["பிரதோஷம்"] },
-    29: { tamil_date: "வைகாசி 15", nakshatra: "விசாகம்", tithi: "சதுர்த்தசி", events: [] },
-    30: { tamil_date: "வைகாசி 16", nakshatra: "அனுஷம்", tithi: "பௌர்ணமி", events: ["பௌர்ணமி"] },
-    31: { tamil_date: "வைகாசி 17", nakshatra: "கேட்டை", tithi: "பிரதமை", events: [] }
+    27: { tamil_date: "வைகாசி 13", nakshatra: "அஸ்தம்", tithi: "த்வாதசி", events: [] },
+    28: { tamil_date: "வைகாசி 14", nakshatra: "சித்திரை", tithi: "த்ரயோதசி", events: ["பிரதோஷம்", "பக்ரீத்"] },
+    29: { tamil_date: "வைகாசி 15", nakshatra: "சுவாதி", tithi: "சதுர்த்தசி", events: [] },
+    30: { tamil_date: "வைகாசி 16", nakshatra: "விசாகம்", tithi: "பௌர்ணமி", events: ["பௌர்ணமி"] },
+    31: { tamil_date: "வைகாசி 17", nakshatra: "அனுஷம்", tithi: "பிரதமை", events: [] }
 };
+
 
 // Process May data
 Object.keys(MAY_2026_DATA).forEach(day => {
     const data = MAY_2026_DATA[day];
     data.dayType = getDayType(data.events);
+    data.isGovtHoliday = data.events.some(e => GOVT_HOLIDAY_NAMES.includes(e));
     data.festival = data.events.length > 0 ? data.events.join(", ") : null;
 });
 
@@ -336,6 +350,7 @@ const JUNE_2026_DATA = {
 Object.keys(JUNE_2026_DATA).forEach(day => {
     const data = JUNE_2026_DATA[day];
     data.dayType = getDayType(data.events);
+    data.isGovtHoliday = data.events.some(e => GOVT_HOLIDAY_NAMES.includes(e));
     data.festival = data.events.length > 0 ? data.events.join(", ") : null;
 });
 
@@ -378,6 +393,7 @@ const JULY_2026_DATA = {
 Object.keys(JULY_2026_DATA).forEach(day => {
     const data = JULY_2026_DATA[day];
     data.dayType = getDayType(data.events);
+    data.isGovtHoliday = data.events.some(e => GOVT_HOLIDAY_NAMES.includes(e));
     data.festival = data.events.length > 0 ? data.events.join(", ") : null;
 });
 
@@ -420,6 +436,7 @@ const AUGUST_2026_DATA = {
 Object.keys(AUGUST_2026_DATA).forEach(day => {
     const data = AUGUST_2026_DATA[day];
     data.dayType = getDayType(data.events);
+    data.isGovtHoliday = data.events.some(e => GOVT_HOLIDAY_NAMES.includes(e));
     data.festival = data.events.length > 0 ? data.events.join(", ") : null;
 });
 
@@ -428,7 +445,7 @@ const SEPTEMBER_2026_DATA = {
     1: { tamil_date: "ஆவணி 15", nakshatra: "அஸ்வினி", tithi: "சதுர்த்தி", events: [] },
     2: { tamil_date: "ஆவணி 16", nakshatra: "பரணி", tithi: "பஞ்சமி", events: [] },
     3: { tamil_date: "ஆவணி 17", nakshatra: "கார்த்திகை", tithi: "சப்தமி", events: [] },
-    4: { tamil_date: "ஆவணி 18", nakshatra: "ரோகிணி", tithi: "அஷ்டமி", events: ["கோகுளாஷ்டமி"] },
+    4: { tamil_date: "ஆவணி 18", nakshatra: "ரோகிணி", tithi: "அஷ்டமி", events: ["கோகுளாஷ்டமி", "கிருஷ்ண ஜெயந்தி"] },
     5: { tamil_date: "ஆவணி 19", nakshatra: "மிருகசீரிடம்", tithi: "நவமி", events: [] },
     6: { tamil_date: "ஆவணி 20", nakshatra: "திருவாதிரை", tithi: "தசமி", events: [] },
     7: { tamil_date: "ஆவணி 21", nakshatra: "புனர்பூசம்", tithi: "ஏகாதசி", events: ["ஏகாதசி"] },
@@ -461,6 +478,7 @@ const SEPTEMBER_2026_DATA = {
 Object.keys(SEPTEMBER_2026_DATA).forEach(day => {
     const data = SEPTEMBER_2026_DATA[day];
     data.dayType = getDayType(data.events);
+    data.isGovtHoliday = data.events.some(e => GOVT_HOLIDAY_NAMES.includes(e));
     data.festival = data.events.length > 0 ? data.events.join(", ") : null;
 });
 
@@ -470,7 +488,7 @@ const OCTOBER_2026_DATA = {
     2: { tamil_date: "புரட்டாசி 15", nakshatra: "மிருகசீரிடம்", tithi: "ஷஷ்டி", events: ["காந்தி ஜெயந்தி"] },
     3: { tamil_date: "புரட்டாசி 16", nakshatra: "திருவாதிரை", tithi: "ஸப்தமி", events: [] },
     4: { tamil_date: "புரட்டாசி 17", nakshatra: "புனர்பூசம்", tithi: "நவமி", events: ["மகா நவமி"] },
-    5: { tamil_date: "புரட்டாசி 18", nakshatra: "பூசம்", tithi: "தசமி", events: ["விஜயதசமி"] },
+    5: { tamil_date: "புரட்டாசி 18", nakshatra: "பூசம்", tithi: "தசமி", events: [] },
     6: { tamil_date: "புரட்டாசி 19", nakshatra: "ஆயில்யம்", tithi: "ஏகாதசி", events: ["ஏகாதசி"] },
     7: { tamil_date: "புரட்டாசி 20", nakshatra: "மகம்", tithi: "த்வாதசி", events: ["பிரதோஷம்"] },
     8: { tamil_date: "புரட்டாசி 21", nakshatra: "பூரம்", tithi: "த்ரயோதசி", events: ["மாத சிவராத்திரி"] },
@@ -484,8 +502,8 @@ const OCTOBER_2026_DATA = {
     16: { tamil_date: "புரட்டாசி 29", nakshatra: "கேட்டை", tithi: "ஷஷ்டி", events: [] },
     17: { tamil_date: "புரட்டாசி 30", nakshatra: "மூலம்", tithi: "ஸப்தமி", events: ["ஐப்பசி மாதம் தொடக்கம்"] },
     18: { tamil_date: "ஐப்பசி 1", nakshatra: "பூராடம்", tithi: "ஸப்தமி", events: ["ஐப்பசி மாதம் தொடக்கம்"] },
-    19: { tamil_date: "ஐப்பசி 2", nakshatra: "உத்திராடம்", tithi: "நவமி", events: [] },
-    20: { tamil_date: "ஐப்பசி 3", nakshatra: "திருவோணம்", tithi: "ஏகாதசி", events: ["ஏகாதசி"] },
+    19: { tamil_date: "ஐப்பசி 2", nakshatra: "உத்திராடம்", tithi: "நவமி", events: ["ஆயுத பூஜை"] },
+    20: { tamil_date: "ஐப்பசி 3", nakshatra: "திருவோணம்", tithi: "ஏகாதசி", events: ["விஜயதசமி", "ஏகாதசி"] },
     21: { tamil_date: "ஐப்பசி 4", nakshatra: "அவிட்டம்", tithi: "தசமி", events: ["பிரதோஷம்"] },
     22: { tamil_date: "ஐப்பசி 5", nakshatra: "சதயம்", tithi: "ஏகாதசி", events: ["மாத சிவராத்திரி"] },
     23: { tamil_date: "ஐப்பசி 6", nakshatra: "பூரட்டாதி", tithi: "த்வாதசி", events: [] },
@@ -503,6 +521,7 @@ const OCTOBER_2026_DATA = {
 Object.keys(OCTOBER_2026_DATA).forEach(day => {
     const data = OCTOBER_2026_DATA[day];
     data.dayType = getDayType(data.events);
+    data.isGovtHoliday = data.events.some(e => GOVT_HOLIDAY_NAMES.includes(e));
     data.festival = data.events.length > 0 ? data.events.join(", ") : null;
 });
 
@@ -544,6 +563,7 @@ const NOVEMBER_2026_DATA = {
 Object.keys(NOVEMBER_2026_DATA).forEach(day => {
     const data = NOVEMBER_2026_DATA[day];
     data.dayType = getDayType(data.events);
+    data.isGovtHoliday = data.events.some(e => GOVT_HOLIDAY_NAMES.includes(e));
     data.festival = data.events.length > 0 ? data.events.join(", ") : null;
 });
 
@@ -586,6 +606,7 @@ const DECEMBER_2026_DATA = {
 Object.keys(DECEMBER_2026_DATA).forEach(day => {
     const data = DECEMBER_2026_DATA[day];
     data.dayType = getDayType(data.events);
+    data.isGovtHoliday = data.events.some(e => GOVT_HOLIDAY_NAMES.includes(e));
     data.festival = data.events.length > 0 ? data.events.join(", ") : null;
 });
 
@@ -724,14 +745,14 @@ function assignSpecialImages() {
     });
 
     if (vaikasiAmavasai) {
-        const vaganamImages = [day1, day2, day3, day4, day5, day6, day7, day8, day9, day10];
+        const vaganamImages = [day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11, day12, day13, day14, day15, day16];
         const vaganamNames = [
             "அன்ன வாகனம்", "சிம்ம வாகனம்", "சேஷ வாகனம்", "கருட வாகனம்",
             "அனுமந்த வாகனம்", "யானை வாகனம்", "திருகல்யாணம்", "வெண்ணெய்தாழி",
-            "குதிரை வாகனம்", "தீர்த்தவாரி"
+            "குதிரை வாகனம்", "தீர்த்தவாரி", "இரவு வைகை எழுந்தருளல்", "குதிரை வாகனம்", "மன்டுக மகரிஷி மோட்சம்", "கருட வாகனம்", "அனுமந்த வாகனம்", "கள்ளர் திருக்கோலம் (கோவிலை நோக்கி)"
         ];
 
-        for (let i = 0; i < 10; i++) {
+        for (let i = 0; i < 16; i++) {
             // Amavasai + 4 = Day 1 (May 16 + 4 = May 20)
             const startDate = new Date(2026, vaikasiAmavasai.month, vaikasiAmavasai.day + 4 + i);
             const m = startDate.getMonth();
@@ -740,6 +761,7 @@ function assignSpecialImages() {
             if (PANCHANGAM_2026[m] && PANCHANGAM_2026[m][d]) {
                 const dayData = PANCHANGAM_2026[m][d];
                 dayData.image = vaganamImages[i];
+                console.log(dayData.image)
                 if (!dayData.events.includes(vaganamNames[i])) {
                     dayData.events.push(vaganamNames[i]);
                     dayData.festival = dayData.events.length > 0 ? dayData.events.join(", ") : null;
@@ -773,6 +795,139 @@ function assignSpecialImages() {
             const dayData = PANCHANGAM_2026[m][d];
             if (!dayData.image) {
                 dayData.image = panguni_dhani;
+            }
+        }
+    }
+
+    // Chithirai Pournami Sequence (pmk_day_1 to pmk_day_10)
+    let chithiraiPournami = null;
+    Object.keys(PANCHANGAM_2026).forEach(month => {
+        const monthData = PANCHANGAM_2026[month];
+        Object.keys(monthData).forEach(day => {
+            const data = monthData[day];
+            if (data.tamil_date.startsWith("சித்திரை") && (data.tithi === "பௌர்ணமி" || (data.events && data.events.includes("பௌர்ணமி")))) {
+                if (!chithiraiPournami) {
+                    chithiraiPournami = { month: parseInt(month), day: parseInt(day) };
+                }
+            }
+        });
+    });
+
+    if (chithiraiPournami) {
+        const pmkImages = [pmk_day_1, pmk_day_2, pmk_day_3, pmk_day_4, pmk_day_5, pmk_day_6, pmk_day_7, pmk_day_8, pmk_day_9, pmk_day_10];
+        for (let i = 0; i < 10; i++) {
+            // Sequence starts 4 days before Pournami
+            const targetDate = new Date(2026, chithiraiPournami.month, chithiraiPournami.day - 4 + i);
+            const m = targetDate.getMonth();
+            const d = targetDate.getDate();
+
+            if (PANCHANGAM_2026[m] && PANCHANGAM_2026[m][d]) {
+                const dayData = PANCHANGAM_2026[m][d];
+                dayData.image = pmkImages[i];
+            }
+        }
+    }
+
+    // Aadi Pournami Sequence (aadi1 to aadi8)
+    let aadiPournami = null;
+    Object.keys(PANCHANGAM_2026).forEach(month => {
+        const monthData = PANCHANGAM_2026[month];
+        Object.keys(monthData).forEach(day => {
+            const data = monthData[day];
+            if (data.tamil_date.startsWith("ஆடி") && (data.tithi === "பௌர்ணமி" || (data.events && data.events.includes("பௌர்ணமி")))) {
+                if (!aadiPournami) {
+                    aadiPournami = { month: parseInt(month), day: parseInt(day) };
+                }
+            }
+        });
+    });
+
+    if (aadiPournami) {
+        const aadiImages = [aadi1, aadi2, aadi3, aadi4, aadi5, aadi6, aadi7, aadi8];
+        for (let i = 0; i < 8; i++) {
+            // Sequence starts 7 days before Pournami (Pournami is day 8)
+            const targetDate = new Date(2026, aadiPournami.month, aadiPournami.day - 7 + i);
+            const m = targetDate.getMonth();
+            const d = targetDate.getDate();
+
+            if (PANCHANGAM_2026[m] && PANCHANGAM_2026[m][d]) {
+                const dayData = PANCHANGAM_2026[m][d];
+                dayData.image = aadiImages[i];
+            }
+        }
+    }
+
+    // Vijayadhasami Sequence (aadi1 to aadi9 + vijaya_dhasami)
+    let vijayadhasami = null;
+    Object.keys(PANCHANGAM_2026).forEach(month => {
+        const monthData = PANCHANGAM_2026[month];
+        Object.keys(monthData).forEach(day => {
+            const data = monthData[day];
+            if (data.events && data.events.includes("விஜயதசமி")) {
+                if (!vijayadhasami) {
+                    vijayadhasami = { month: parseInt(month), day: parseInt(day) };
+                }
+            }
+        });
+    });
+
+    if (vijayadhasami) {
+        const navaratriImages = [aadi1, aadi2, aadi3, aadi4, aadi5, aadi6, aadi7, aadi8, aadi8];
+        // Assign aadi1-aadi9 to the 9 days before Vijayadhasami
+        for (let i = 0; i < 9; i++) {
+            const targetDate = new Date(2026, vijayadhasami.month, vijayadhasami.day - 9 + i);
+            const m = targetDate.getMonth();
+            const d = targetDate.getDate();
+
+            if (PANCHANGAM_2026[m] && PANCHANGAM_2026[m][d]) {
+                const dayData = PANCHANGAM_2026[m][d];
+                dayData.image = navaratriImages[i];
+            }
+        }
+        // Assign vijaya_dhasami image to the day itself
+        if (PANCHANGAM_2026[vijayadhasami.month] && PANCHANGAM_2026[vijayadhasami.month][vijayadhasami.day]) {
+            PANCHANGAM_2026[vijayadhasami.month][vijayadhasami.day].image = vijaya_dhasami;
+        }
+    }
+
+    // Mandala Poojai Assignment (41st day from Karthigai 1)
+    let karthigaiStart = null;
+    Object.keys(PANCHANGAM_2026).forEach(month => {
+        const monthData = PANCHANGAM_2026[month];
+        Object.keys(monthData).forEach(day => {
+            const data = monthData[day];
+            if (data.tamil_date === "கார்த்திகை 1") {
+                if (!karthigaiStart) {
+                    karthigaiStart = { month: parseInt(month), day: parseInt(day) };
+                }
+            }
+        });
+    });
+
+    if (karthigaiStart) {
+        // Calculation: Karthigai 1 is Day 1. 41st day is Karthigai 1 + 40 days.
+        const targetDate = new Date(2026, karthigaiStart.month, karthigaiStart.day + 40);
+        const m = targetDate.getMonth();
+        const d = targetDate.getDate();
+
+        if (PANCHANGAM_2026[m] && PANCHANGAM_2026[m][d]) {
+            const dayData = PANCHANGAM_2026[m][d];
+            dayData.image = mandala_poojai;
+            if (!dayData.events.includes("மண்டல பூஜை")) {
+                dayData.events.push("மண்டல பூஜை");
+                dayData.festival = dayData.events.join(", ");
+            }
+        }
+
+        // Srivari Bajanai - Next day of Mandala Poojai (Day 42)
+        const nextDate = new Date(2026, karthigaiStart.month, karthigaiStart.day + 41);
+        const nm = nextDate.getMonth();
+        const nd = nextDate.getDate();
+
+        if (PANCHANGAM_2026[nm] && PANCHANGAM_2026[nm][nd]) {
+            const nextDayData = PANCHANGAM_2026[nm][nd];
+            if (!nextDayData.image) {
+                nextDayData.image = srivari_bajanai;
             }
         }
     }
