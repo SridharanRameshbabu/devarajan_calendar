@@ -15,7 +15,7 @@ function App() {
     } else if (step === 'intro') {
       const timer = setTimeout(() => {
         setStep('calendar');
-      }, 2000);
+      }, 1800);
       return () => clearTimeout(timer);
     }
   }, [step]);
@@ -49,15 +49,16 @@ function App() {
           {/* Glassmorphic Logo Container */}
           <div className="relative flex items-center justify-center w-44 h-44 sm:w-60 sm:h-60">
             {/* Outer Progress Ring Animation */}
-            <svg className="absolute inset-0 w-full h-full -rotate-90">
+            <svg className="absolute inset-0 w-full h-full -rotate-90 overflow-visible">
               <circle
                 cx="50%"
                 cy="50%"
-                r="46%"
+                r="42%"
                 fill="none"
                 stroke="url(#goldGradient)"
-                strokeWidth="2.5"
+                strokeWidth="3"
                 strokeDasharray="400"
+                style={{ transformOrigin: 'center' }}
                 className="animate-ring-draw"
               />
               <defs>
@@ -104,9 +105,10 @@ function App() {
             50% { transform: translateY(-30px) scale(1.1); }
           }
           @keyframes ring-draw {
-            0% { stroke-dashoffset: 400; opacity: 0; }
-            50% { stroke-dashoffset: 200; opacity: 1; }
-            100% { stroke-dashoffset: 0; opacity: 0; }
+            0% { stroke-dashoffset: 400; opacity: 0; transform: rotate(0deg); }
+            15% { opacity: 1; }
+            85% { opacity: 1; }
+            100% { stroke-dashoffset: 0; opacity: 0; transform: rotate(360deg); }
           }
           @keyframes shimmer {
             0% { transform: translateX(-200%) skewX(-25deg); }
@@ -125,7 +127,7 @@ function App() {
             animation: float 8s ease-in-out infinite;
           }
           .animate-ring-draw {
-            animation: ring-draw 3s ease-in-out infinite;
+            animation: ring-draw 1.1s linear infinite;
           }
           .animate-shimmer {
             animation: shimmer 4s infinite ease-in-out;
@@ -148,7 +150,7 @@ function App() {
   }
 
   return (
-    <div className="h-full w-full overflow-hidden bg-[#0c0600] animate-in fade-in zoom-in-75 duration-1000 ease-out">
+    <div className="min-h-screen w-full bg-[#0c0600] animate-in fade-in zoom-in-75 duration-1000 ease-out">
       <MonthCalendar />
     </div>
   );
