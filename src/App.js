@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from "react";
 import MonthCalendar from "./MonthCalendar";
-import sdkLogo from "./assests/sdk_logo.png";
-import introImg from "./assests/IMG-20250611-WA0085.jpg";
+import Auth from "./Auth";
+import { isAuthenticated } from "./utils/auth";
+const sdkLogo = "https://ik.imagekit.io/hskzc0fkv/assests/sdk_logo.png";
+const introImg = "https://ik.imagekit.io/hskzc0fkv/assests/IMG-20250611-WA0085.jpg";
+
 
 function App() {
-  const [step, setStep] = useState('loading'); // 'loading', 'intro', 'calendar'
+  const [step, setStep] = useState('loading'); // 'loading', 'intro', 'auth', 'calendar'
 
   useEffect(() => {
     if (step === 'loading') {
@@ -14,11 +17,20 @@ function App() {
       return () => clearTimeout(timer);
     } else if (step === 'intro') {
       const timer = setTimeout(() => {
-        setStep('calendar');
+        // Check if user is authenticated
+        if (isAuthenticated()) {
+          setStep('calendar');
+        } else {
+          setStep('auth');
+        }
       }, 1800);
       return () => clearTimeout(timer);
     }
   }, [step]);
+
+  const handleAuthSuccess = () => {
+    setStep('calendar');
+  };
 
   if (step === 'loading') {
     return (
@@ -147,6 +159,10 @@ function App() {
         />
       </div>
     );
+  }
+
+  if (step === 'auth') {
+    return <Auth onAuthSuccess={handleAuthSuccess} />;
   }
 
   return (

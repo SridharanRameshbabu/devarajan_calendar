@@ -3,20 +3,20 @@ import { getTamilDate, getTamilMonthsInGregorianMonth, getPanchangamData, DAY_TY
 import { getRahukalamData } from "./rahukalam";
 
 
-// Import month images
-import januaryImg from "./assests/IMG-20250611-WA0085.jpg";
-import februaryImg from "./assests/IMG-20250531-WA0189(1).jpg"
-import marchImg from './assests/May_21_Singam_Vaganam.jpg'
-import aprilImg from './assests/May_22_Sesa_Vaganam.jpg'
-import mayImg from './assests/May_23_Garuda_Vaganam.jpg'
-import juneImg from './assests/May_24_Anumantha_Vaganam.jpg'
-import julyImg from './assests/May_25_Yanai_Vaganam.jpg'
-import augustImg from './assests/May_26_Thirukallayanam(2).jpg'
-import septemberImg from './assests/May_27_Vennaithali(1).jpg'
-import octoberImg from './assests/May_28_Kudurai_Mrg.jpg'
-import novemberImg from './assests/May_29_Therthavaari.jpg'
-import decemberImg from './assests/Dec_Month.jpg'
-import logo from './assests/sdk_logo.png'
+// Import month images from ImageKit CDN
+const januaryImg = "https://ik.imagekit.io/hskzc0fkv/assests/IMG-20250611-WA0085.jpg";
+const februaryImg = "https://ik.imagekit.io/hskzc0fkv/assests/IMG-20250531-WA0189(1).jpg";
+const marchImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_21_Singam_Vaganam.jpg';
+const aprilImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_22_Sesa_Vaganam.jpg';
+const mayImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_23_Garuda_Vaganam.jpg';
+const juneImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_24_Anumantha_Vaganam.jpg';
+const julyImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_25_Yanai_Vaganam.jpg';
+const augustImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_26_Thirukallayanam(2).jpg';
+const septemberImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_27_Vennaithali(1).jpg';
+const octoberImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_28_Kudurai_Mrg.jpg';
+const novemberImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_29_Therthavaari.jpg';
+const decemberImg = 'https://ik.imagekit.io/hskzc0fkv/assests/Dec_Month.jpg';
+const logo = 'https://ik.imagekit.io/hskzc0fkv/assests/sdk_logo.png';
 
 const MONTH_NAMES = [
     "January", "February", "March", "April", "May", "June",
@@ -145,21 +145,14 @@ const MonthCalendar = () => {
 
                 {/* Header with decorative leaves */}
                 <div className="relative pt-6 pb-2">
-                    {/* <div className="absolute top-2 left-8 text-3xl">🍃</div> */}
-                    {/* <div className="absolute top-2 right-8 text-3xl transform scale-x-[-1]">🍃</div> */}
-                    <div style={{ margin: '0 auto', width: 'fit-content', display: "flex" }} className="">
-                        <img src={logo} alt="SDK Logo" width="40" />&nbsp;
-                        <span className="text-center inline-block"
-                            style={{ fontFamily: 'cursive', margin: 'auto', fontSize: '12px' }}>
+                    <div style={{ margin: '0 auto', width: 'fit-content', display: "flex", alignItems: "center", gap: "8px" }} className="">
+                        <img src={logo} alt="SDK Logo" width="28" />
+                        <span className="text-center inline-block text-sm sm:text-base md:text-lg font-semibold"
+                            style={{ fontFamily: 'cursive' }}>
                             SRI DEVARAJAN KUZHUMAM - EMS
-                        </span>&nbsp;
-                        <img src={logo} alt="SDK Logo" width="40" />
+                        </span>
+                        <img src={logo} alt="SDK Logo" width="28" />
                     </div>
-                    {/* <h6 className="text-center text-xl sm:text-4xl font-bold text-white drop-shadow-lg tracking-wider"
-                        style={{ fontFamily: 'cursive' }}>
-                        SRI DEVARAJAN KUZHUMAM - EMS
-                    </h6> */}
-                    {/* <p className="text-center text-white text-xl font-semibold">{currentYear}</p> */}
                 </div>
 
                 {/* Side-by-Side Wrapper for MD+ screens */}

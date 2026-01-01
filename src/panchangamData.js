@@ -1,64 +1,65 @@
 // Panchangam Data for January 2026
 // Data provided directly in Tamil for accurate display
 
-import andal_malai from './assests/andal_malai_matram.jpg'
-import radha_sapthami from './assests/radha_sapthami.jpeg'
-import vidai_atru from './assests/thai-1.jpg'
-import punnim from './assests/Punnim.jpg'
-import unjal_sevai from './assests/Unthal_Seva.jpg'
+// Using ImageKit CDN for optimized image loading
+const andal_malai = 'https://ik.imagekit.io/hskzc0fkv/assests/andal_malai_matram.jpg';
+const radha_sapthami = 'https://ik.imagekit.io/hskzc0fkv/assests/radha_sapthami.jpeg';
+const vidai_atru = 'https://ik.imagekit.io/hskzc0fkv/assests/thai-1.jpg';
+const punnim = 'https://ik.imagekit.io/hskzc0fkv/assests/Punnim.jpg';
+const unjal_sevai = 'https://ik.imagekit.io/hskzc0fkv/assests/Unthal_Seva.jpg';
 
 // Vaikasi Vaganam Images
-import day1 from './assests/May_20_Annam_Vaganam.jpg'
-import day2 from './assests/May_21_Singam_Vaganam.jpg'
-import day3 from './assests/May_22_Sesa_Vaganam.jpg'
-import day4 from './assests/May_23_Garuda_Vaganam.jpg'
-import day5 from './assests/May_24_Anumantha_Vaganam.jpg'
-import day6 from './assests/May_25_Yanai_Vaganam.jpg'
-import day7 from './assests/May_26_Thirukallayanam(2).jpg'
-import day8 from './assests/May_27_Vennaithali(1).jpg'
-import day9 from './assests/May_28_Kudurai_Mrg.jpg'
-import day10 from './assests/May_29_Therthavaari.jpg'
-import day11 from './assests/IMG-20250611-WA0085.jpg'
-import day12 from './assests/May_31_kudurai.jpg'
-import day13 from './assests/Jun_1_Day_3.jpg'
-import day14 from './assests/Jun_2_Day_4.jpg'
-import day15 from './assests/Jun_3_Day_5.jpg'
-import day16 from './assests/Dec_Month.jpg'
-import masimagam from './assests/Aani_Kettai(S)_Sestaabhisegam.jpg'
-import ramanavami from './assests/Panguni_Navami(RamaNavami).jpg'
-import panguni_thirukalyanam from './assests/Panguni_Uthiram(S)_Thirukalyanan.jpg'
-import panguni_dhani from './assests/Panguni_Uthiram_D5.jpg'
-import tamilnewyear from './assests/Tamil_New_Year.jpg'
-import gajendra_motcham from './assests/Gajendra Mokcham.jpg'
+const day1 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_20_Annam_Vaganam.jpg';
+const day2 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_21_Singam_Vaganam.jpg';
+const day3 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_22_Sesa_Vaganam.jpg';
+const day4 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_23_Garuda_Vaganam.jpg';
+const day5 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_24_Anumantha_Vaganam.jpg';
+const day6 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_25_Yanai_Vaganam.jpg';
+const day7 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_26_Thirukallayanam(2).jpg';
+const day8 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_27_Vennaithali(1).jpg';
+const day9 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_28_Kudurai_Mrg.jpg';
+const day10 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_29_Therthavaari.jpg';
+const day11 = 'https://ik.imagekit.io/hskzc0fkv/assests/IMG-20250611-WA0085.jpg';
+const day12 = 'https://ik.imagekit.io/hskzc0fkv/1000242482.jpg';
+const day13 = 'https://ik.imagekit.io/hskzc0fkv/assests/Jun_1_Day_3.jpg';
+const day14 = 'https://ik.imagekit.io/hskzc0fkv/assests/Jun_2_Day_4.jpg';
+const day15 = 'https://ik.imagekit.io/hskzc0fkv/assests/Jun_3_Day_5.jpg';
+const day16 = 'https://ik.imagekit.io/hskzc0fkv/assests/Dec_Month.jpg';
+const masimagam = 'https://ik.imagekit.io/hskzc0fkv/assests/Aani_Kettai(S)_Sestaabhisegam.jpg';
+const ramanavami = 'https://ik.imagekit.io/hskzc0fkv/assests/Panguni_Navami(RamaNavami).jpg';
+const panguni_thirukalyanam = 'https://ik.imagekit.io/hskzc0fkv/assests/Panguni_Uthiram(S)_Thirukalyanan.jpg';
+const panguni_dhani = 'https://ik.imagekit.io/hskzc0fkv/assests/Panguni_Uthiram_D5.jpg';
+const tamilnewyear = 'https://ik.imagekit.io/hskzc0fkv/assests/Tamil_New_Year.jpg';
+const gajendra_motcham = 'https://ik.imagekit.io/hskzc0fkv/assests/Gajendra%20Mokcham.jpg';
 
 //Pmk chithirai
-import pmk_day_1 from './assests/Pmk-day-1.jpg'
-import pmk_day_2 from './assests/Pmk-day-2.jpg'
-import pmk_day_3 from './assests/Pmk-day-3.jpg'
-import pmk_day_4 from './assests/Pmk-day-4.jpg'
-import pmk_day_5 from './assests/Pmk-day-5.jpg'
-import pmk_day_6 from './assests/Pmk-day-6.webp'
-import pmk_day_7 from './assests/Pmk-day-7.jpg'
-import pmk_day_8 from './assests/Pmk-day-8.jpg'
-import pmk_day_9 from './assests/Pmk-day-9.jpg'
-import pmk_day_10 from './assests/Pmk-day-10.jpg'
+const pmk_day_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-1.jpg';
+const pmk_day_2 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-2.jpg';
+const pmk_day_3 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-3.jpg';
+const pmk_day_4 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-4.jpg';
+const pmk_day_5 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-5.jpg';
+const pmk_day_6 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-6.webp';
+const pmk_day_7 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-7.jpg';
+const pmk_day_8 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-8.jpg';
+const pmk_day_9 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-9.jpg';
+const pmk_day_10 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-10.jpg';
 
 //Pmk aadi
-import aadi1 from './assests/aadi1.jpg'
-import aadi2 from './assests/aadi2.jpg'
-import aadi3 from './assests/aadi3.jpg'
-import aadi4 from './assests/aadi4.jpg'
-import aadi5 from './assests/aadi5.jpg'
-import aadi6 from './assests/aadi6.jpg'
-import aadi7 from './assests/aadi7.jpg'
-import aadi8 from './assests/aadi8.jpeg'
-import aadi9 from './assests/aadi9.jpeg'
-import aadi10 from './assests/aadi10.jpg'
+const aadi1 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi1.jpg';
+const aadi2 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi2.jpg';
+const aadi3 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi3.jpg';
+const aadi4 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi4.jpg';
+const aadi5 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi5.jpg';
+const aadi6 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi6.jpg';
+const aadi7 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi7.jpg';
+const aadi8 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi8.jpeg';
+const aadi9 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi9.jpeg';
+const aadi10 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi10.jpg';
 
-import vijaya_dhasami from './assests/Vijayadhasami.jpg'
+const vijaya_dhasami = 'https://ik.imagekit.io/hskzc0fkv/assests/Vijayadhasami.jpg';
 
-import mandala_poojai from './assests/mandala abhisegam.jpg'
-import srivari_bajanai from './assests/mandala abhisegam.jpg'
+const mandala_poojai = 'https://ik.imagekit.io/hskzc0fkv/assests/mandala%20abhisegam.jpg';
+const srivari_bajanai = 'https://ik.imagekit.io/hskzc0fkv/assests/mandala%20abhisegam.jpg'
 
 // Day types for color highlighting
 export const DAY_TYPES = {
