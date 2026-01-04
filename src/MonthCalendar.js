@@ -114,7 +114,7 @@ const MonthCalendar = () => {
             >
 
                 {/* Header with decorative leaves */}
-                <div className="relative pt-6 pb-2">
+                <div className="relative pt-3 pb-1">
                     <div style={{ margin: '0 auto', width: 'fit-content', display: "flex", alignItems: "center", gap: "8px" }} className="">
                         <img src={logo} alt="SDK Logo" width="28" />
                         <span className="text-center inline-block text-sm sm:text-base md:text-lg font-semibold"
@@ -126,16 +126,16 @@ const MonthCalendar = () => {
                 </div>
 
                 {/* Side-by-Side Wrapper for MD+ screens */}
-                <div className="flex flex-col md:flex-row p-4 gap-6">
+                <div className="flex flex-col md:flex-row p-4 gap-4">
 
                     {/* Left Column: Month Image (Desktop) / Top Section (Mobile) */}
                     <div className="md:w-5/12 lg:w-4/12 flex items-start justify-center">
                         {MONTH_IMAGES[currentMonth] && (
-                            <div className="w-full h-full max-w-[300px] md:max-w-none rounded-2xl overflow-hidden shadow-2xl border-8 border-white/20 transform transition hover:scale-[1.02] duration-500">
+                            <div className="w-full h-full max-w-[300px] md:max-w-[400px] lg:max-w-none rounded-2xl overflow-hidden shadow-2xl border-8 border-white/20 transform transition hover:scale-[1.02] duration-500">
                                 <img
                                     src={MONTH_IMAGES[currentMonth]}
                                     alt={`${monthName} decoration`}
-                                    className="w-full object-cover h-[300px] md:h-[500px]"
+                                    className="w-full object-cover h-[300px] md:h-[700px]"
                                     style={{
                                         objectPosition: 'top',
                                         borderRadius: '12px'
@@ -182,18 +182,20 @@ const MonthCalendar = () => {
                             {/* Weekday Headers */}
                             <div className="grid grid-cols-7 bg-gray-50 border-b border-gray-100">
                                 {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((day, idx) => (
-                                    <div key={day} className={`py-4 text-center text-xs sm:text-sm font-black uppercase tracking-tighter ${idx === 0 ? 'text-red-500 bg-red-50/30' : 'text-gray-500'}`}>
+                                    <div key={day} className={`py-2 sm:py-4 text-center text-[10px] sm:text-sm font-black uppercase tracking-tighter ${idx === 0 ? 'text-red-500 bg-red-50/30' : 'text-gray-500'}`}>
                                         {day}
                                     </div>
                                 ))}
                             </div>
 
+
                             {/* Days Grid */}
                             <div className="grid grid-cols-7">
                                 {/* Empty cells */}
                                 {emptyCells.map((_, i) => (
-                                    <div key={`empty-${i}`} className="h-20 sm:h-24 md:h-28 border border-gray-50 bg-gray-50/20"></div>
+                                    <div key={`empty-${i}`} className="h-14 sm:h-24 md:h-28 border border-gray-50 bg-gray-50/20"></div>
                                 ))}
+
 
                                 {/* Day cells */}
                                 {daysWithData.map((dayData, i) => {
@@ -204,18 +206,21 @@ const MonthCalendar = () => {
                                         <button
                                             key={i}
                                             onClick={() => handleDateSelect(dayData)}
-                                            className={`h-20 sm:h-24 md:h-28 border border-gray-50 relative transition-all duration-150 p-1 sm:p-1.5
+                                            className={`h-14 sm:h-24 md:h-28 border border-gray-50 relative transition-all duration-150 p-0.5 sm:p-1.5
                                                 ${getDayBackground(panchangam.dayType, isSelected)}`}
                                         >
+
                                             {/* Gregorian Date */}
-                                            <span className={`text-base sm:text-lg font-bold block ${(isSunday || panchangam.isGovtHoliday) ? 'text-red-600' : 'text-gray-800'}`}>
+                                            <span className={`text-sm sm:text-lg font-bold block ${(isSunday || panchangam.isGovtHoliday) ? 'text-red-600' : 'text-gray-800'}`}>
                                                 {day}
                                             </span>
 
+
                                             {/* Thithi - small text */}
-                                            <span className="text-[6px] sm:text-[9px] text-purple-600 block truncate">
+                                            <span className="text-[5px] sm:text-[9px] text-purple-600 block truncate">
                                                 {panchangam.tithi}
                                             </span>
+
 
                                             {/* Nakshatra - small text */}
                                             {/* <span className="text-[6px] sm:text-[9px] text-blue-600 block truncate">
@@ -223,16 +228,18 @@ const MonthCalendar = () => {
                                     </span> */}
 
                                             {/* Tamil Date - positioned at bottom right */}
-                                            <span className={`absolute bottom-0.5 right-1 text-[14px] font-medium ${(isSunday || panchangam.isGovtHoliday) ? 'text-red-500' : 'text-gray-500'}`}>
+                                            <span className={`absolute bottom-0 right-0.5 text-[10px] sm:text-[14px] font-medium ${(isSunday || panchangam.isGovtHoliday) ? 'text-red-500' : 'text-gray-500'}`}>
                                                 {tamilDate.day}
                                             </span>
 
+
                                             {/* Tamil Month name for 1st day of Tamil month */}
                                             {tamilDate.day === 1 && (
-                                                <span className="absolute bottom-0.5 left-0.5 text-[7px] text-orange-600 font-bold leading-tight">
+                                                <span className="absolute bottom-0 left-0 text-[5px] sm:text-[7px] text-orange-600 font-bold leading-tight">
                                                     {tamilDate.month}
                                                 </span>
                                             )}
+
 
                                             {/* Event indicator removed */}
 
