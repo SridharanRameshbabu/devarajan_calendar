@@ -925,11 +925,11 @@ function assignSpecialImages() {
             [pmk_eswaran_kovil_3, pmk_eswaran_kovil_3_1], // Day 3
             [pmk_eswaran_kovil_4, pmk_eswaran_kovil_4_1], // Day 4
             [pmk_eswaran_kovil_5, pmk_eswaran_kovil_5_1], // Day 5
-            [pmk_eswaran_kovil_6, pmk_eswaran_kovil_6_1], // Day 6
-            [pmk_eswaran_kovil_7, pmk_eswaran_kovil_7_1, pmk_eswaran_kovil_7_2], // Day 7
-            [pmk_eswaran_kovil_8], // Day 8
-            [pmk_eswaran_kovil_9], // Day 9
-            [pmk_eswaran_kovil_10, pmk_eswaran_kovil_10_1] // Day 10
+            [pmk_eswaran_kovil_6, pmk_day_1], // Day 6
+            [pmk_eswaran_kovil_7, pmk_day_2], // Day 7
+            [pmk_eswaran_kovil_8,pmk_day_3], // Day 8
+            [pmk_eswaran_kovil_9, pmk_day_4], // Day 9
+            [pmk_eswaran_kovil_10, pmk_day_5] // Day 10
         ];
 
         // Assign images for 10 days ending on Chithirai-Chithirai day (April 30)
