@@ -3,8 +3,8 @@ import MonthCalendar from "./MonthCalendar";
 import Auth from "./Auth";
 import { isAuthenticated } from "./utils/auth";
 const sdkLogo = "https://ik.imagekit.io/hskzc0fkv/assests/SDK_Logo_Final.png";
-const introImg = "https://ik.imagekit.io/hskzc0fkv/assests/IMG-20250611-WA0085.jpg";
-
+const introImgmobile = 'https://ik.imagekit.io/hskzc0fkv/Second%20Loading%20Mobile%20%20(5).jpg';
+const introImglaptop = 'https://ik.imagekit.io/hskzc0fkv/Second%20Loading%20Laptop%20%20(1).jpg'
 
 function App() {
   const [step, setStep] = useState('loading'); // 'loading', 'intro', 'auth', 'calendar'
@@ -178,10 +178,17 @@ function App() {
   if (step === 'intro') {
     return (
       <div className="fixed inset-0 z-50 bg-[#0c0600]">
+        {/* Mobile image */}
         <img
-          src={introImg}
+          src={introImgmobile}
           alt="Intro"
-          className="w-full h-full object-cover animate-in fade-in zoom-in-110 duration-1000"
+          className="w-full h-full object-cover animate-in fade-in zoom-in-110 duration-1000 md:hidden"
+        />
+        {/* Laptop/Desktop image */}
+        <img
+          src={introImglaptop}
+          alt="Intro"
+          className="w-full h-full object-cover animate-in fade-in zoom-in-110 duration-1000 hidden md:block"
         />
       </div>
     );
