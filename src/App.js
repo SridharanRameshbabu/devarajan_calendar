@@ -182,7 +182,7 @@ function App() {
         <img
           src={introImgmobile}
           alt="Intro"
-          className="w-full h-full object-cover animate-in fade-in zoom-in-110 duration-1000 md:hidden"
+          className="w-full h-full object-fill animate-in fade-in zoom-in-110 duration-1000 md:hidden"
         />
         {/* Laptop/Desktop image */}
         <img
