@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import MonthCalendar from "./MonthCalendar";
 import Auth from "./Auth";
 import { isAuthenticated } from "./utils/auth";
@@ -7,10 +7,7 @@ const introImgmobile = 'https://ik.imagekit.io/hskzc0fkv/Second%20Loading%20Mobi
 const introImglaptop = 'https://ik.imagekit.io/hskzc0fkv/Second%20Loading%20Laptop%20%20(1).jpg'
 
 function App() {
-  const [step, setStep] = useState('loading'); // 'loading', 'intro', 'auth', 'calendar', 'exit_confirm'
-  const [showExitMessage, setShowExitMessage] = useState(false);
-  const backPressRef = useRef(false);
-  const backTimerRef = useRef(null);
+  const [step, setStep] = useState('loading'); // 'loading', 'intro', 'auth', 'calendar', 'exiting'
 
   useEffect(() => {
     if (step === 'loading') {
@@ -18,7 +15,7 @@ function App() {
         setStep('intro');
       }, 1100);
       return () => clearTimeout(timer);
-    } else if (step === 'intro' && !showExitMessage) {
+    } else if (step === 'intro') {
       const timer = setTimeout(() => {
         // Check if user is authenticated
         if (isAuthenticated()) {
@@ -28,62 +25,57 @@ function App() {
         }
       }, 1800);
       return () => clearTimeout(timer);
+    } else if (step === 'exiting') {
+      const timer = setTimeout(() => {
+        // Try to close the window/app
+        window.close();
+        // If window.close() doesn't work (most browsers block it), go back in history
+        if (window.history.length > 1) {
+          window.history.back();
+        }
+      }, 1500);
+      return () => clearTimeout(timer);
     }
-  }, [step, showExitMessage]);
+  }, [step]);
 
-  // Handle back button press
+  // Handle back button press and swipe gestures
   useEffect(() => {
-    if (step === 'calendar') {
-      // Push multiple dummy states to ensure back button doesn't exit immediately
-      window.history.pushState({ page: 'app' }, '');
-      window.history.pushState({ page: 'calendar' }, '');
-
-      const handlePopState = (e) => {
-        e.preventDefault();
-
-        if (backPressRef.current) {
-          // Second back press within 2 seconds - close/exit
-          // For PWA or apps that support it
-          if (window.navigator && window.navigator.app && window.navigator.app.exitApp) {
-            window.navigator.app.exitApp();
-          } else {
-            // For mobile browsers, we can't force close, 
-            // so just stay on intro and let user close manually
-            setShowExitMessage(false);
-            backPressRef.current = false;
-          }
-          return;
-        }
-
-        // First back press - show exit confirmation
-        backPressRef.current = true;
-        setStep('intro');
-        setShowExitMessage(true);
-
-        // Push states again to catch next back press
-        window.history.pushState({ page: 'app' }, '');
-        window.history.pushState({ page: 'exit_confirm' }, '');
-
-        // Reset after 2 seconds
-        backTimerRef.current = setTimeout(() => {
-          backPressRef.current = false;
-          setShowExitMessage(false);
-          setStep('calendar');
-          // Re-push history states
-          window.history.pushState({ page: 'app' }, '');
-          window.history.pushState({ page: 'calendar' }, '');
-        }, 2000);
-      };
-
-      window.addEventListener('popstate', handlePopState);
-
-      return () => {
-        window.removeEventListener('popstate', handlePopState);
-        if (backTimerRef.current) {
-          clearTimeout(backTimerRef.current);
-        }
-      };
+    // Push multiple history states on mount to prevent immediate back navigation
+    if (step === 'calendar' || step === 'auth') {
+      // Push multiple states to create a buffer for swipe gestures
+      window.history.pushState({ page: 'app1' }, '');
+      window.history.pushState({ page: 'app2' }, '');
+      window.history.pushState({ page: 'current' }, '');
     }
+  }, [step]);
+
+  useEffect(() => {
+    const handlePopState = (event) => {
+      if (step === 'calendar' || step === 'auth') {
+        // Prevent default back navigation
+        event.preventDefault();
+        // Show exit screen
+        setStep('exiting');
+        // Push state to prevent actual navigation
+        window.history.pushState({ page: 'exit' }, '');
+      }
+    };
+
+    const handleBeforeUnload = (event) => {
+      if (step === 'calendar') {
+        // This helps on some browsers
+        event.preventDefault();
+        event.returnValue = '';
+      }
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    return () => {
+      window.removeEventListener('popstate', handlePopState);
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
   }, [step]);
 
   const handleAuthSuccess = () => {
@@ -248,14 +240,25 @@ function App() {
           alt="Intro"
           className="w-full h-full object-cover animate-in fade-in zoom-in-110 duration-1000 hidden md:block"
         />
-        {/* Exit confirmation message */}
-        {showExitMessage && (
-          <div className="absolute bottom-20 left-0 right-0 flex justify-center animate-in fade-in slide-in-from-bottom duration-300">
-            <div className="bg-black/80 text-white px-6 py-3 rounded-full text-sm font-medium shadow-lg">
-              Press again to exit
-            </div>
-          </div>
-        )}
+      </div>
+    );
+  }
+
+  if (step === 'exiting') {
+    return (
+      <div className="fixed inset-0 z-50 bg-[#0c0600]">
+        {/* Mobile image */}
+        <img
+          src={introImgmobile}
+          alt="Goodbye"
+          className="w-full h-full object-fill animate-in fade-in zoom-in-105 duration-500 md:hidden"
+        />
+        {/* Laptop/Desktop image */}
+        <img
+          src={introImglaptop}
+          alt="Goodbye"
+          className="w-full h-full object-cover animate-in fade-in zoom-in-105 duration-500 hidden md:block"
+        />
       </div>
     );
   }
