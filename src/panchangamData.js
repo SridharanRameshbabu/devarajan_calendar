@@ -9,6 +9,7 @@ const punnim = 'https://ik.imagekit.io/hskzc0fkv/assests/Punnim.jpg';
 const unjal_sevai = 'https://ik.imagekit.io/hskzc0fkv/assests/Unjal_Sevai_Final.jpg';
 
 // Vaikasi Vaganam Images
+const day0 = 'https://ik.imagekit.io/hskzc0fkv/May_19_KappuKattu.jpg'
 const day1 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_20_Annam_Vaganam.jpg';
 const day2 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_21_Singam_Vaganam.jpg';
 const day3 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_22_Sesa_Vaganam.jpg';
@@ -59,6 +60,7 @@ const aadi9 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi9.jpeg';
 const aadi10 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi10.jpg';
 
 const aadilastvelli = 'https://ik.imagekit.io/hskzc0fkv/Aadi%20last%20Friday.jpg'
+const aadiamavasai = 'https://ik.imagekit.io/hskzc0fkv/aadiamavasai.jpeg'
 
 const vijaya_dhasami = 'https://ik.imagekit.io/hskzc0fkv/assests/Vijayadhasami.jpg';
 
@@ -70,6 +72,7 @@ const srinivasan_2 = 'https://ik.imagekit.io/hskzc0fkv/assests/Srinivasan_108.jp
 
 const thirumangai_alvar = 'https://ik.imagekit.io/hskzc0fkv/assests/Karthigai_Chitrai(S)_Thirumangai_Azlvar.jpg';
 const ramanujar_jeyanthi = 'https://ik.imagekit.io/hskzc0fkv/assests/Ramanujar_Jayanthi.jpg'
+const aadipooram = 'https://ik.imagekit.io/hskzc0fkv/Aadipooram.jpg'
 
 
 //Pmk Eswaran kovil
@@ -456,7 +459,7 @@ const AUGUST_2026_DATA = {
     10: { tamil_date: "ஆடி 25", nakshatra: "திருவாதிரை", tithi: "த்வாதசி", events: [] },
     11: { tamil_date: "ஆடி 26", nakshatra: "புனர்பூசம்", tithi: "சதுர்த்தசி", events: ["பிரதோஷம்"] },
     12: { tamil_date: "ஆடி 27", nakshatra: "பூசம்", tithi: "அமாவாசை", events: ["மாத சிவராத்திரி"] },
-    13: { tamil_date: "ஆடி 28", nakshatra: "ஆயில்யம்", tithi: "பிரதமை", events: ["அமாவாசை"] },
+    13: { tamil_date: "ஆடி 28", nakshatra: "ஆயில்யம்", tithi: "பிரதமை", events: [""] },
     14: { tamil_date: "ஆடி 29", nakshatra: "பூரம்", tithi: "த்விதியை", events: ["ஆவணி மாதம் தொடக்கம்"] },
     15: { tamil_date: "ஆடி 30", nakshatra: "உத்திரம்", tithi: "த்ரிதியை", events: ["இந்திய சுதந்திர தினம்"] },
     16: { tamil_date: "ஆடி 31", nakshatra: "அஸ்தம்", tithi: "சதுர்த்தி", events: [] },
@@ -846,16 +849,16 @@ function assignSpecialImages() {
     });
 
     if (vaikasiAmavasai) {
-        const vaganamImages = [day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11, day12, day13, day14, day15, day16];
+        const vaganamImages = [day0, day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11, day12, day13, day14, day15, day16];
         const vaganamNames = [
-            "அன்ன வாகனம்", "சிம்ம வாகனம்", "சேஷ வாகனம்", "கருட வாகனம்",
+            "காப்புக் கட்டு", "அன்ன வாகனம்", "சிம்ம வாகனம்", "சேஷ வாகனம்", "கருட வாகனம்",
             "அனுமந்த வாகனம்", "யானை வாகனம்", "திருகல்யாணம்", "வெண்ணெய்தாழி",
             "குதிரை வாகனம்", "தீர்த்தவாரி", "இரவு வைகை எழுந்தருளல்", "குதிரை வாகனம்", "மன்டுக மகரிஷி மோட்சம்", "கருட வாகனம்", "அனுமந்த வாகனம்", "கள்ளர் திருக்கோலம் (கோவிலை நோக்கி)"
         ];
 
-        for (let i = 0; i < 16; i++) {
-            // Amavasai + 4 = Day 1 (May 16 + 4 = May 20)
-            const startDate = new Date(2026, vaikasiAmavasai.month, vaikasiAmavasai.day + 4 + i);
+        for (let i = 0; i < 17; i++) {
+            // Amavasai + 3 = Day 0 (May 16 + 3 = May 19), Day 1 starts at +4
+            const startDate = new Date(2026, vaikasiAmavasai.month, vaikasiAmavasai.day + 3 + i);
             const m = startDate.getMonth();
             const d = startDate.getDate();
 
@@ -1012,10 +1015,53 @@ function assignSpecialImages() {
 
             if (PANCHANGAM_2026[m] && PANCHANGAM_2026[m][d]) {
                 const dayData = PANCHANGAM_2026[m][d];
-                dayData.image = aadiImages[i];
+                // Don't overwrite if image already exists (e.g., Aadi Pooram)
+                if (!dayData.image) {
+                    dayData.image = aadiImages[i];
+                }
             }
         }
     }
+
+    // Aadi Pooram - After Aadi Pournami to properly handle secondary images
+    Object.keys(PANCHANGAM_2026).forEach(month => {
+        const monthData = PANCHANGAM_2026[month];
+        Object.keys(monthData).forEach(day => {
+            const data = monthData[day];
+            if (data.tamil_date.startsWith("ஆடி") && data.nakshatra === "பூரம்") {
+                if (data.image && data.image !== aadipooram) {
+                    // If another image exists (from Aadi Pournami), add aadipooram as secondary
+                    data.leftImage = aadipooram;
+                    data.secondaryImage = aadipooram;
+                } else if (!data.image) {
+                    data.image = aadipooram;
+                }
+                if (data.events && !data.events.includes("ஆடி பூரம்")) {
+                    data.events.push("ஆடி பூரம்");
+                }
+            }
+        });
+    });
+
+    // Aadi Amavasai - Aadi month with Amavasai tithi
+    Object.keys(PANCHANGAM_2026).forEach(month => {
+        const monthData = PANCHANGAM_2026[month];
+        Object.keys(monthData).forEach(day => {
+            const data = monthData[day];
+            if (data.tamil_date.startsWith("ஆடி") && (data.tithi === "அமாவாசை" || (data.events && data.events.includes("அமாவாசை")))) {
+                if (data.image && data.image !== aadiamavasai) {
+                    // If another image exists, add aadiamavasai as secondary
+                    data.leftImage = aadiamavasai;
+                    data.secondaryImage = aadiamavasai;
+                } else if (!data.image) {
+                    data.image = aadiamavasai;
+                }
+                if (data.events && !data.events.includes("ஆடி அமாவாசை")) {
+                    data.events.push("ஆடி அமாவாசை");
+                }
+            }
+        });
+    });
 
     // Vijayadhasami Sequence (aadi1 to aadi9 + vijaya_dhasami)
     let vijayadhasami = null;

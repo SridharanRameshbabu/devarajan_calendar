@@ -11,7 +11,7 @@ const aprilImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_22_Sesa_Vaganam.j
 const mayImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_23_Garuda_Vaganam.jpg';
 const juneImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_24_Anumantha_Vaganam.jpg';
 const julyImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_25_Yanai_Vaganam.jpg';
-const augustImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_26_Thirukallayanam(2).jpg';
+const augustImg = 'https://ik.imagekit.io/hskzc0fkv/May%2026_%20Poopallaaku.jpg';
 const septemberImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May-27?updatedAt=1767456631432';
 const octoberImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_28_Kudurai_Mrg.jpg';
 const novemberImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_29_Therthavaari.jpg';
