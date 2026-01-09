@@ -33,11 +33,13 @@ const day19 = 'https://ik.imagekit.io/hskzc0fkv/assests/June_7_Kanthavadi_Urchav
 const masimagam = 'https://ik.imagekit.io/hskzc0fkv/assests/Aani_Kettai(S)_Sestaabhisegam.jpg';
 const ramanavami = 'https://ik.imagekit.io/hskzc0fkv/assests/Panguni_Navami(RamaNavami).jpg';
 const ramanavami_kalyanam = 'https://ik.imagekit.io/hskzc0fkv/assests/Rama%20Navami%20night.jpg'
+const ramseetha_pallakku = 'https://ik.imagekit.io/hskzc0fkv/assests/IMG_20260109_230001.jpg'
 const panguni_thirukalyanam = 'https://ik.imagekit.io/hskzc0fkv/assests/Panguni_Uthiram(S)_Thirukalyanan.jpg';
 const panguni_uthiram = 'https://ik.imagekit.io/hskzc0fkv/assests/_1010332.jpg'
 const panguni_dhani = 'https://ik.imagekit.io/hskzc0fkv/assests/Panguni_Uthiram_D5.jpg';
 const tamilnewyear = 'https://ik.imagekit.io/hskzc0fkv/assests/Tamil_New_Year.jpg';
 const gajendra_motcham = 'https://ik.imagekit.io/hskzc0fkv/assests/Gajendra%20Mokcham.jpg';
+const ganupaari = 'https://ik.imagekit.io/hskzc0fkv/assests/Aani_Kettai(S)_Sestaabhisegam.jpg'
 
 //Pmk chithirai
 const pmk_day_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-1.jpg';
@@ -166,7 +168,7 @@ const JANUARY_2026_DATA = {
     13: { tamil_date: "மார்கழி 29", nakshatra: "விசாகம்", tithi: "தசமி", events: [] },
     14: { tamil_date: "மார்கழி 30", nakshatra: "அனுஷம்", tithi: "ஏகாதசி", events: ["போகி", "மகர சங்கராந்தி"] },
     15: { tamil_date: "தை 1", nakshatra: "கேட்டை", tithi: "துவாதசி", events: ["தை பொங்கல்", "ஆண்டாள் விடையாற்று உற்சவம்"], image: vidai_atru },
-    16: { tamil_date: "தை 2", nakshatra: "மூலம்", tithi: "த்ரயோதசி", events: ["மாட்டு பொங்கல்", "திருவள்ளுவர் தினம்"] },
+    16: { tamil_date: "தை 2", nakshatra: "மூலம்", tithi: "த்ரயோதசி", events: ["கணுப்பாரி உற்சவம்", "மாட்டு பொங்கல்", "திருவள்ளுவர் தினம்"], image: ganupaari },
     17: { tamil_date: "தை 3", nakshatra: "மூலம்", tithi: "சதுர்த்தசி", events: ["காணும் பொங்கல்", "உழவர் திருநாள்"] },
     18: { tamil_date: "தை 4", nakshatra: "பூராடம்", tithi: "அமாவாசை", events: ["அமாவாசை"] },
     19: { tamil_date: "தை 5", nakshatra: "உத்திராடம்", tithi: "பிரதமை", events: [] },
@@ -263,7 +265,7 @@ const MARCH_2026_DATA = {
     26: { tamil_date: "பங்குனி 12", nakshatra: "திருவாதிரை", tithi: "அஷ்டமி", events: [] },
     27: { tamil_date: "பங்குனி 13", nakshatra: "புனர்பூசம்", tithi: "நவமி", events: [] },
     28: { tamil_date: "பங்குனி 14", nakshatra: "பூசம்", tithi: "தசமி", events: ["ராம சீதா திருக்கல்யாணம்"], image: ramanavami_kalyanam },
-    29: { tamil_date: "பங்குனி 15", nakshatra: "ஆயில்யம்", tithi: "ஏகாதசி", events: ["ஏகாதசி"] },
+    29: { tamil_date: "பங்குனி 15", nakshatra: "ஆயில்யம்", tithi: "ஏகாதசி", events: ["சீதா ராம புஷ்ப பல்லக்கு", "ஏகாதசி"], image: ramseetha_pallakku },
     30: { tamil_date: "பங்குனி 16", nakshatra: "மகம்", tithi: "துவாதசி", events: [] },
     31: { tamil_date: "பங்குனி 17", nakshatra: "பூரம்", tithi: "த்ரயோதசி", events: ["மகாவீர் ஜெயந்தி"] }
 };

@@ -151,11 +151,11 @@ const MonthCalendar = ({ onShowCredits, currentMonth, setCurrentMonth }) => {
                     {/* Left Column: Month Image (Desktop) / Top Section (Mobile) */}
                     <div className="md:w-5/12 lg:w-4/12 flex items-start justify-center">
                         {MONTH_IMAGES[currentMonth] && (
-                            <div className="w-full h-full max-w-[300px] md:max-w-[400px] lg:max-w-none rounded-2xl overflow-hidden shadow-2xl border-8 border-white/20 transform transition hover:scale-[1.02] duration-500">
+                            <div className="w-full h-full max-w-[400px] md:max-w-[500px] lg:max-w-none rounded-2xl overflow-hidden shadow-2xl border-8 border-white/20 transform transition hover:scale-[1.02] duration-500">
                                 <img
                                     src={MONTH_IMAGES[currentMonth]}
                                     alt={`${monthName} decoration`}
-                                    className="w-full object-cover h-[300px] md:h-[700px]"
+                                    className="w-full object-cover h-[400px] md:h-[700px]"
                                     style={{
                                         objectPosition: 'top',
                                         borderRadius: '12px'
@@ -239,7 +239,7 @@ const MonthCalendar = ({ onShowCredits, currentMonth, setCurrentMonth }) => {
 
 
                                             {/* Thithi - small text */}
-                                            <span className="text-[5px] sm:text-[9px] text-purple-600 block truncate">
+                                            <span className="text-[4px] sm:text-[6px] text-purple-600 block truncate">
                                                 {panchangam.tithi}
                                             </span>
 
@@ -257,7 +257,7 @@ const MonthCalendar = ({ onShowCredits, currentMonth, setCurrentMonth }) => {
 
                                             {/* Tamil Month name for 1st day of Tamil month */}
                                             {tamilDate.day === 1 && (
-                                                <span className="absolute bottom-0 left-0 text-[5px] sm:text-[7px] text-orange-600 font-bold leading-tight">
+                                                <span className="absolute bottom-0 left-0 text-[5px] sm:text-[5px] text-orange-600 font-bold leading-tight">
                                                     {tamilDate.month}
                                                 </span>
                                             )}
@@ -432,8 +432,19 @@ const MonthCalendar = ({ onShowCredits, currentMonth, setCurrentMonth }) => {
                     >
                         ✨ Collaborators & Credits ✨
                     </button>
-                    <p className="mt-3 text-white/60 text-xs">
+                    <p className="mt-3 text-white/70 text-xs">
                         © 2026 Sri Devarajan Kuzhumam. All Rights Reserved.
+                    </p>
+                    <p className="mt-2 text-white/90 text-[12px] px-4">
+                        குறிப்பு: இக்காலண்டர் சில சந்தர்ப்பங்களில் தவறாக காட்டலாம். துல்லியமான அப்டேட்டுகளுக்கு{' '}
+                        <a
+                            href="https://devarajan-calendar.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="text-yellow-400 underline hover:text-yellow-300"
+                        >
+                            இங்கே பார்க்கவும்
+                        </a>
                     </p>
                 </div>
             </div>
