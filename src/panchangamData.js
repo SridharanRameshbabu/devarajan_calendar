@@ -3,7 +3,7 @@
 
 // Using ImageKit CDN for optimized image loading
 const andal_malai = 'https://ik.imagekit.io/hskzc0fkv/assests/andal_malai_matram.jpg';
-const radha_sapthami = 'https://ik.imagekit.io/hskzc0fkv/assests/radha_sapthami.jpeg';
+const radha_sapthami = 'https://ik.imagekit.io/hskzc0fkv/assests/Jan_25_RathaSapthami.jpg';
 const vidai_atru = 'https://ik.imagekit.io/hskzc0fkv/assests/thai-1.jpg';
 const punnim = 'https://ik.imagekit.io/hskzc0fkv/assests/Punnim.jpg';
 const unjal_sevai = 'https://ik.imagekit.io/hskzc0fkv/assests/Unjal_Sevai_Final.jpg';
@@ -26,6 +26,10 @@ const day13 = 'https://ik.imagekit.io/hskzc0fkv/assests/Jun_1_Day_3.jpg';
 const day14 = 'https://ik.imagekit.io/hskzc0fkv/assests/Jun_2_Day_4.jpg';
 const day15 = 'https://ik.imagekit.io/hskzc0fkv/assests/Jun_3_Day_5.jpg';
 const day16 = 'https://ik.imagekit.io/hskzc0fkv/assests/Dec_Month.jpg';
+const day17 = 'https://ik.imagekit.io/hskzc0fkv/assests/June_5_Kannadi_Sevai.jpg'
+const day17_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/June_5_Kannadi_Sevai2.jpg'
+const day18 = 'https://ik.imagekit.io/hskzc0fkv/assests/June_6_Urchava_Santhi.jpg'
+const day19 = 'https://ik.imagekit.io/hskzc0fkv/assests/June_7_Kanthavadi_Urchavam.jpg'
 const masimagam = 'https://ik.imagekit.io/hskzc0fkv/assests/Aani_Kettai(S)_Sestaabhisegam.jpg';
 const ramanavami = 'https://ik.imagekit.io/hskzc0fkv/assests/Panguni_Navami(RamaNavami).jpg';
 const panguni_thirukalyanam = 'https://ik.imagekit.io/hskzc0fkv/assests/Panguni_Uthiram(S)_Thirukalyanan.jpg';
@@ -73,7 +77,8 @@ const srinivasan_2 = 'https://ik.imagekit.io/hskzc0fkv/assests/Srinivasan_108.jp
 const thirumangai_alvar = 'https://ik.imagekit.io/hskzc0fkv/assests/Karthigai_Chitrai(S)_Thirumangai_Azlvar.jpg';
 const ramanujar_jeyanthi = 'https://ik.imagekit.io/hskzc0fkv/assests/Ramanujar_Jayanthi.jpg'
 const aadipooram = 'https://ik.imagekit.io/hskzc0fkv/Aadipooram.jpg'
-
+const karthigai = 'https://ik.imagekit.io/hskzc0fkv/assests/Karthigai.jpg?updatedAt=1767874152540'
+const diwali = 'https://ik.imagekit.io/hskzc0fkv/assests/Diwali.jpg'
 
 //Pmk Eswaran kovil
 
@@ -100,13 +105,11 @@ const navarathri_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar_Srinivas
 const navarathri_2 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar%20(1).jpg'
 const navarathri_3 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar%20(2).jpg'
 const navarathri_4 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar(3).jpg'
-const navarathri_5 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar%20(4).jpg'
+const navarathri_5 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar_Oct15.jpg'
 const navarathri_6 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar%20(5).jpg'
 const navarathri_7 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar%20(6).jpg'
 const navarathri_8 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar%20(7).jpg'
 const navarathri_9 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar_Srinivasan.jpg'
-
-const logo = 'https://ik.imagekit.io/hskzc0fkv/assests/SDK_Logo_Final.png';
 
 // Day types for color highlighting
 export const DAY_TYPES = {
@@ -768,6 +771,24 @@ function assignSpecialImages() {
                 if (data.events && !data.events.includes("திருமங்கை ஆழ்வார்")) {
                     data.events.push("திருமங்கை ஆழ்வார்");
                 }
+
+                // Add karthigai image to next day
+                const nextDate = new Date(2026, parseInt(month), parseInt(day) + 1);
+                const nextMonth = nextDate.getMonth();
+                const nextDay = nextDate.getDate();
+
+                if (PANCHANGAM_2026[nextMonth] && PANCHANGAM_2026[nextMonth][nextDay]) {
+                    const nextDayData = PANCHANGAM_2026[nextMonth][nextDay];
+                    if (nextDayData.image) {
+                        nextDayData.leftImage = karthigai;
+                        nextDayData.secondaryImage = karthigai;
+                    } else {
+                        nextDayData.image = karthigai;
+                    }
+                    if (nextDayData.events && !nextDayData.events.includes("கார்த்திகை தீபம்")) {
+                        nextDayData.events.push("கார்த்திகை தீபம்");
+                    }
+                }
             }
 
             // Ramanujar Jayanthi - Chithirai month with Thiruvathirai nakshatra
@@ -775,6 +796,16 @@ function assignSpecialImages() {
                 data.image = ramanujar_jeyanthi;
                 if (data.events && !data.events.includes("ராமானுஜர் ஜெயந்தி")) {
                     data.events.push("ராமானுஜர் ஜெயந்தி");
+                }
+            }
+
+            // Diwali - Add diwali image
+            if (data.events && data.events.includes("தீபாவளி")) {
+                if (data.image) {
+                    data.leftImage = diwali;
+                    data.secondaryImage = diwali;
+                } else {
+                    data.image = diwali;
                 }
             }
 
@@ -849,14 +880,14 @@ function assignSpecialImages() {
     });
 
     if (vaikasiAmavasai) {
-        const vaganamImages = [day0, day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11, day12, day13, day14, day15, day16];
+        const vaganamImages = [day0, day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11, day12, day13, day14, day15, day16, day17, day18, day19];
         const vaganamNames = [
             "காப்புக் கட்டு", "அன்ன வாகனம்", "சிம்ம வாகனம்", "சேஷ வாகனம்", "கருட வாகனம்",
             "அனுமந்த வாகனம்", "யானை வாகனம்", "திருகல்யாணம்", "வெண்ணெய்தாழி",
-            "குதிரை வாகனம்", "தீர்த்தவாரி", "இரவு வைகை எழுந்தருளல்", "குதிரை வாகனம்", "மன்டுக மகரிஷி மோட்சம்", "கருட வாகனம்", "அனுமந்த வாகனம்", "கள்ளர் திருக்கோலம் (கோவிலை நோக்கி)"
+            "குதிரை வாகனம்", "தீர்த்தவாரி", "இரவு வைகை எழுந்தருளல்", "குதிரை வாகனம்", "மன்டுக மகரிஷி மோட்சம்", "கருட வாகனம்", "அனுமந்த வாகனம்", "கள்ளர் திருக்கோலம் (கோவிலை நோக்கி)", "கண்ணாடி சேவை", "உற்சவ சாந்தி", "காந்தாடி உற்சவம்"
         ];
 
-        for (let i = 0; i < 17; i++) {
+        for (let i = 0; i < 20; i++) {
             // Amavasai + 3 = Day 0 (May 16 + 3 = May 19), Day 1 starts at +4
             const startDate = new Date(2026, vaikasiAmavasai.month, vaikasiAmavasai.day + 3 + i);
             const m = startDate.getMonth();
@@ -865,6 +896,12 @@ function assignSpecialImages() {
             if (PANCHANGAM_2026[m] && PANCHANGAM_2026[m][d]) {
                 const dayData = PANCHANGAM_2026[m][d];
                 dayData.image = vaganamImages[i];
+
+                // Day 17 has 2 images for carousel
+                if (i === 17) {
+                    dayData.secondaryImage = day17_1;
+                }
+
                 if (!dayData.events.includes(vaganamNames[i])) {
                     dayData.events.push(vaganamNames[i]);
                     dayData.festival = dayData.events.length > 0 ? dayData.events.join(", ") : null;
