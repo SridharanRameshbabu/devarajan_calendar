@@ -13,7 +13,7 @@ function App() {
     if (step === 'loading') {
       const timer = setTimeout(() => {
         setStep('intro');
-      }, 1100);
+      }, 3000);
       return () => clearTimeout(timer);
     } else if (step === 'intro') {
       const timer = setTimeout(() => {
@@ -23,7 +23,7 @@ function App() {
         } else {
           setStep('auth');
         }
-      }, 1800);
+      }, 2000);
       return () => clearTimeout(timer);
     } else if (step === 'exiting') {
       const timer = setTimeout(() => {
