@@ -7,11 +7,11 @@ import { getRahukalamData } from "./rahukalam";
 const januaryImg = "https://ik.imagekit.io/hskzc0fkv/assests/IMG-20250611-WA0085.jpg";
 const februaryImg = "https://ik.imagekit.io/hskzc0fkv/assests/IMG-20250531-WA0189(1).jpg";
 const marchImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_21_Singam_Vaganam.jpg';
-const aprilImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_22_Sesa_Vaganam.jpg';
+const aprilImg = 'https://ik.imagekit.io/hskzc0fkv/assests/IMG_20260110_124508.jpg';
 const mayImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_23_Garuda_Vaganam.jpg';
 const juneImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_24_Anumantha_Vaganam.jpg';
 const julyImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_25_Yanai_Vaganam.jpg';
-const augustImg = 'https://ik.imagekit.io/hskzc0fkv/May%2026_%20Poopallaaku.jpg';
+const augustImg = 'https://ik.imagekit.io/hskzc0fkv/assests/IMG_20260110_124325.jpg';
 const septemberImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May-27?updatedAt=1767456631432';
 const octoberImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_28_Kudurai_Mrg.jpg';
 const novemberImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_29_Therthavaari.jpg';
@@ -49,7 +49,8 @@ const MonthCalendar = ({ onShowCredits, currentMonth, setCurrentMonth }) => {
     const [currentYear, setCurrentYear] = useState(2026);
     const [selectedDate, setSelectedDate] = useState(null);
     const [currentImageIndex, setCurrentImageIndex] = useState(0); // For image carousel
-    // const [touchStart, setTouchStart] = useState(null);
+    // State to store the center coordinates of the clicked date cell
+    const [animOrigin, setAnimOrigin] = useState({ x: 0, y: 0 });
 
     const monthName = MONTH_NAMES[currentMonth];
 
@@ -94,11 +95,20 @@ const MonthCalendar = ({ onShowCredits, currentMonth, setCurrentMonth }) => {
         setSelectedDate(null);
     };
 
-    const handleDateSelect = (dayData) => {
+    const handleDateSelect = (e, dayData) => {
+        // Calculate the center of the clicked element for animation origin
+        if (e && e.currentTarget) {
+            const rect = e.currentTarget.getBoundingClientRect();
+            setAnimOrigin({
+                x: rect.left + rect.width / 2,
+                y: rect.top + rect.height / 2
+            });
+        } else {
+            // Fallback to center screen if event is missing (unlikely)
+            setAnimOrigin({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
+        }
         setSelectedDate(dayData);
     };
-
-    // Swipe navigation removed
 
     // Auto-slide for images when modal is open and has multiple images
     React.useEffect(() => {
@@ -127,10 +137,48 @@ const MonthCalendar = ({ onShowCredits, currentMonth, setCurrentMonth }) => {
         }
     };
 
+    // Month-based background colors
+    const monthColors = {
+        0: 'bg-blue-200',      // January - Cool winter blue
+        1: 'bg-pink-200',      // February - Valentine pink
+        2: 'bg-green-200',     // March - Spring green
+        3: 'bg-yellow-200',    // April - Bright yellow
+        4: 'bg-orange-200',    // May - Warm orange
+        5: 'bg-red-200',       // June - Summer red
+        6: 'bg-purple-200',    // July - Monsoon purple
+        7: 'bg-teal-200',      // August - Independence teal
+        8: 'bg-amber-200',     // September - Autumn amber
+        9: 'bg-rose-200',      // October - Festival rose
+        10: 'bg-indigo-200',   // November - Deep indigo
+        11: 'bg-emerald-200'   // December - Holiday emerald
+    };
+
+    const currentMonthColor = monthColors[currentMonth] || 'bg-green-200';
+
     return (
-        <div className="min-h-screen bg-gradient-to-b from-green-200 to-green-300 flex items-center justify-center">
+        <div className={`min-h-screen  bg-gradient-to-b flex items-center justify-center`}>
+            {/* Inject dynamic keyframes for this specific open action */}
+            {selectedDate && (
+                <style>{`
+                    @keyframes genieOpen {
+                        0% {
+                            opacity: 0;
+                            transform: translate(calc(var(--origin-x) - 50vw), calc(var(--origin-y) - 50vh)) scale(0.05);
+                        }
+                        60% {
+                             opacity: 1;
+                             transform: translate(0, 0) scale(1.05);
+                        }
+                        100% {
+                            opacity: 1;
+                            transform: translate(0, 0) scale(1);
+                        }
+                    }
+                `}</style>
+            )}
+
             <div
-                className="w-full cont max-w-full md:max-w-6xl bg-[#8fbc8f] rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden"
+                className={`w-full ${currentMonthColor} cont max-w-full md:max-w-6xl bg-[#8fbc8f] rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden`}
             >
 
                 {/* Header with decorative leaves */}
@@ -226,14 +274,14 @@ const MonthCalendar = ({ onShowCredits, currentMonth, setCurrentMonth }) => {
                                     return (
                                         <button
                                             key={i}
-                                            onClick={() => handleDateSelect(dayData)}
+                                            onClick={(e) => handleDateSelect(e, dayData)}
                                             className={`h-14 sm:h-24 md:h-28 border border-gray-50 relative transition-all duration-150 p-0.5 sm:p-1.5
                                                 ${getDayBackground(panchangam.dayType, isSelected)}
                                                 ${isToday ? 'bg-green-100 border-t-0 border-l-0' : ''}`}
                                         >
 
                                             {/* Gregorian Date */}
-                                            <span className={`text-sm sm:text-lg font-bold block ${isToday ? 'text-green-600' : (isSunday || panchangam.isGovtHoliday) ? 'text-red-600' : 'text-gray-800'}`}>
+                                            <span className={`text-sm sm:text-lg font-bold block ${isToday ? 'text-green-600' : (isSunday || panchangam.isGovtHoliday) ? 'text-red-600' : 'text-[#0C0EA6]'}`}>
                                                 {day}
                                             </span>
 
@@ -300,12 +348,17 @@ const MonthCalendar = ({ onShowCredits, currentMonth, setCurrentMonth }) => {
                 {/* Modal for Selected Date */}
                 {selectedDate && (
                     <div
-                        className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4"
+                        className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4 transition-all duration-300"
                         onClick={() => setSelectedDate(null)}
                     >
                         <div
                             className="bg-white rounded-2xl shadow-2xl max-w-md w-full max-h-[90vh] overflow-y-auto"
                             onClick={(e) => e.stopPropagation()}
+                            style={{
+                                '--origin-x': `${animOrigin.x}px`,
+                                '--origin-y': `${animOrigin.y}px`,
+                                animation: 'genieOpen 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) forwards'
+                            }}
                         >
                             {/* Modal Header with Close Button */}
                             <div className="flex items-center justify-between p-4 border-b bg-gradient-to-r from-green-500 to-green-600 rounded-t-2xl">

@@ -5,7 +5,7 @@ import { isAuthenticated } from "./utils/auth";
 const sdkLogo = "https://ik.imagekit.io/hskzc0fkv/assests/SDK_Logo_Final.png";
 const introImgmobile = 'https://ik.imagekit.io/hskzc0fkv/Second%20Loading%20Mobile%20%20(5).jpg';
 const introImglaptop = 'https://ik.imagekit.io/hskzc0fkv/Second%20Loading%20Laptop%20%20(1).jpg'
-const credits = 'https://ik.imagekit.io/hskzc0fkv/assests/SDK%20Credits.jpg'
+const credits = 'https://ik.imagekit.io/hskzc0fkv/assests/SDK%20Credits%20&%20Creators%20.jpg'
 
 function App() {
   const [step, setStep] = useState('loading'); // 'loading', 'intro', 'auth', 'calendar', 'exiting', 'credits'
