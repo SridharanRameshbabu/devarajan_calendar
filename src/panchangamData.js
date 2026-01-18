@@ -1104,7 +1104,6 @@ function assignSpecialImages() {
 
     // Puratasi Saturdays - assign puratasi_1 to puratasi_4 for each Saturday
     const puratasiSaturdayImages = [puratasi_1, puratasi_2, puratasi_3, puratasi_4];
-    let puratasiSaturdayCount = 0;
 
     // Collect and sort Puratasi Saturdays
     const puratasiSaturdays = [];
