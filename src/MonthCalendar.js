@@ -504,7 +504,7 @@ const MonthCalendar = ({ onShowCredits, currentMonth, setCurrentMonth }) => {
                             href="https://devarajan-calendar.vercel.app/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-yellow-400 underline hover:text-yellow-300"
+                            className="text-white underline hover:text-white-300"
                         >
                             இங்கே பார்க்கவும்
                         </a>
