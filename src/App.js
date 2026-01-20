@@ -127,17 +127,13 @@ function App() {
   // Prevent right-click on images
   useEffect(() => {
     const preventContextMenu = (e) => {
-      if (e.target.tagName === 'IMG') {
-        e.preventDefault();
-        return false;
-      }
+      e.preventDefault();
+      return false;
     };
 
     const preventDrag = (e) => {
-      if (e.target.tagName === 'IMG') {
-        e.preventDefault();
-        return false;
-      }
+      e.preventDefault();
+      return false;
     };
 
     document.addEventListener('contextmenu', preventContextMenu);
