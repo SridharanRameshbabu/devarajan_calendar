@@ -9,27 +9,28 @@ const punnim = 'https://ik.imagekit.io/hskzc0fkv/assests/Punnim.jpg';
 const unjal_sevai = 'https://ik.imagekit.io/hskzc0fkv/assests/Unjal_Sevai_Final.jpg';
 
 // Vaikasi Vaganam Images
-const day0 = 'https://ik.imagekit.io/hskzc0fkv/May_19_KappuKattu.jpg'
-const day1 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_20_Annam_Vaganam.jpg';
-const day2 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_21_Singam_Vaganam.jpg';
-const day3 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_22_Sesa_Vaganam.jpg';
-const day4 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_23_Garuda_Vaganam.jpg';
-const day5 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_24_Anumantha_Vaganam.jpg';
-const day6 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_25_Yanai_Vaganam.jpg';
-const day7 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_26_Thirukallayanam(2).jpg';
-const day8 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_27_Vennaithali(1).jpg';
-const day9 = 'https://ik.imagekit.io/hskzc0fkv/assests/WhatsApp%20Image%202026-01-03%20at%2015.17.53.jpeg';
-const day10 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_29_Therthavaari.jpg';
-const day11 = 'https://ik.imagekit.io/hskzc0fkv/assests/IMG-20250611-WA0085.jpg';
-const day12 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_31_Kuthrai.jpg?updatedAt=1767874152472';
-const day13 = 'https://ik.imagekit.io/hskzc0fkv/assests/Jun_1_Day_3.jpg';
-const day14 = 'https://ik.imagekit.io/hskzc0fkv/assests/Jun_2_Day_4.jpg';
-const day15 = 'https://ik.imagekit.io/hskzc0fkv/assests/Jun_3_Day_5.jpg';
-const day16 = 'https://ik.imagekit.io/hskzc0fkv/assests/Dec_Month.jpg';
-const day17 = 'https://ik.imagekit.io/hskzc0fkv/assests/June_5_Kannadi_Sevai.jpg'
-const day17_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/June_5_Kannadi_Sevai2.jpg'
-const day18 = 'https://ik.imagekit.io/hskzc0fkv/assests/June_6_Urchava_Santhi.jpg'
-const day19 = 'https://ik.imagekit.io/hskzc0fkv/assests/June_7_Kanthavadi_Urchavam.jpg'
+const day0 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_18_Chinna_Alzhagar.jpg?updatedAt=1769178433673'
+const day1 = 'https://ik.imagekit.io/hskzc0fkv/May_19_KappuKattu.jpg'
+const day2 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_20_Annam_Vaganam.jpg';
+const day3 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_21_Singam_Vaganam.jpg';
+const day4 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_22_Sesa_Vaganam.jpg';
+const day5 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_23_Garuda_Vaganam.jpg';
+const day6 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_24_Anumantha_Vaganam.jpg';
+const day7 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_25_Yanai_Vaganam.jpg';
+const day8 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_26_Thirukallayanam(2).jpg';
+const day9 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_27_Vennaithali(1).jpg';
+const day10 = 'https://ik.imagekit.io/hskzc0fkv/assests/WhatsApp%20Image%202026-01-03%20at%2015.17.53.jpeg';
+const day11 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_29_Therthavaari.jpg';
+const day12 = 'https://ik.imagekit.io/hskzc0fkv/assests/IMG-20250611-WA0085.jpg';
+const day13 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_31_Kuthrai.jpg?updatedAt=1767874152472';
+const day14 = 'https://ik.imagekit.io/hskzc0fkv/assests/Jun_1_Day_3.jpg';
+const day15 = 'https://ik.imagekit.io/hskzc0fkv/assests/Jun_2_Day_4.jpg';
+const day16 = 'https://ik.imagekit.io/hskzc0fkv/assests/Jun_3_Day_5.jpg';
+const day17 = 'https://ik.imagekit.io/hskzc0fkv/assests/Dec_Month.jpg';
+const day18 = 'https://ik.imagekit.io/hskzc0fkv/assests/June_5_Kannadi_Sevai.jpg'
+const day18_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/June_5_Kannadi_Sevai2.jpg'
+const day19 = 'https://ik.imagekit.io/hskzc0fkv/assests/June_6_Urchava_Santhi.jpg'
+const day20 = 'https://ik.imagekit.io/hskzc0fkv/assests/June_7_Kanthavadi_Urchavam.jpg'
 const masimagam = 'https://ik.imagekit.io/hskzc0fkv/assests/Punnim.jpg';
 const ramanavami = 'https://ik.imagekit.io/hskzc0fkv/assests/March_27_Rama_Navami.jpg';
 const ramanavami_kalyanam = 'https://ik.imagekit.io/hskzc0fkv/assests/March_28_Marraige.jpg'
@@ -50,7 +51,7 @@ const pmk_day_2 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-2.jpg';
 const pmk_day_3 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-3.jpg';
 const pmk_day_4 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-4.jpg';
 const pmk_day_5 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-5.jpg';
-const pmk_day_6 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-6.webp';
+const pmk_day_6 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_1.jpg';
 const pmk_day_7 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-7.jpg';
 const pmk_day_8 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-8.jpg';
 const pmk_day_9 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-9.jpg';
@@ -173,7 +174,7 @@ function getDayType(events) {
 const JANUARY_2026_DATA = {
     1: { tamil_date: "மார்கழி 17", nakshatra: "ரோகிணி", tithi: "த்ரயோதசி", events: ["ஆங்கில புத்தாண்டு"] },
     2: { tamil_date: "மார்கழி 18", nakshatra: "மிருகசீரிடம்", tithi: "சதுர்த்தசி", events: [] },
-    3: { tamil_date: "மார்கழி 19", nakshatra: "திருவாதிரை", tithi: "பௌர்ணமி", events: ["பௌர்ணமி"] },
+    3: { tamil_date: "மார்கழி 19", nakshatra: "திருவாதிரை", tithi: "பௌர்ணமி", events: [] },
     4: { tamil_date: "மார்கழி 20", nakshatra: "புனர்பூசம்", tithi: "பிரதமை", events: [] },
     5: { tamil_date: "மார்கழி 21", nakshatra: "பூசம்", tithi: "துவிதியை", events: [] },
     6: { tamil_date: "மார்கழி 22", nakshatra: "ஆயில்யம்", tithi: "த்ரிதியை", events: [] },
@@ -214,7 +215,7 @@ Object.keys(JANUARY_2026_DATA).forEach(day => {
 
 // February 2026 data from JSON with events
 const FEBRUARY_2026_DATA = {
-    1: { tamil_date: "தை 18", nakshatra: "பூசம்", tithi: "பௌர்ணமி", events: ["பௌர்ணமி", "தைப்பூசம்"] },
+    1: { tamil_date: "தை 18", nakshatra: "பூசம்", tithi: "பௌர்ணமி", events: ["தைப்பூசம்"] },
     2: { tamil_date: "தை 19", nakshatra: "ஆயில்யம்", tithi: "பிரதமை", events: [] },
     3: { tamil_date: "தை 20", nakshatra: "மகம்", tithi: "துவிதியை", events: [] },
     4: { tamil_date: "தை 21", nakshatra: "பூரம்", tithi: "த்ரிதியை", events: [] },
@@ -301,7 +302,7 @@ Object.keys(MARCH_2026_DATA).forEach(day => {
 // April 2026 data from JSON with events
 const APRIL_2026_DATA = {
     1: { tamil_date: "பங்குனி 18", nakshatra: "உத்திரம்", tithi: "சதுர்த்தசி", events: ['பெருந்தேவி வரதன் திருக்கல்யாணம்'] },
-    2: { tamil_date: "பங்குனி 19", nakshatra: "அஸ்தம்", tithi: "பௌர்ணமி", events: ["பௌர்ணமி"] },
+    2: { tamil_date: "பங்குனி 19", nakshatra: "அஸ்தம்", tithi: "பௌர்ணமி", events: [] },
     3: { tamil_date: "பங்குனி 20", nakshatra: "சித்திரை", tithi: "பிரதமை", events: ["புனித வெள்ளி"] },
     4: { tamil_date: "பங்குனி 21", nakshatra: "சுவாதி", tithi: "த்விதியை", events: [] },
     5: { tamil_date: "பங்குனி 22", nakshatra: "விசாகம்", tithi: "த்ரிதியை", events: ["பங்குனி புஷ்பப்பல்லக்கு", "ஈஸ்டர்", "சங்கடஹர சதுர்த்தி"] },
@@ -329,7 +330,7 @@ const APRIL_2026_DATA = {
     27: { tamil_date: "சித்திரை 14", nakshatra: "பூரம்", tithi: "ஏகாதசி", events: ["எட்டாம் நாள் இரவு அம்பாள் கதிர் குளித்தல் பல்லக்கு", "ஸ்ரீ சுந்தரராஜப் பெருமாள் இரண்டாம் நாள் திருநாள்", "ஏகாதசி"] },
     28: { tamil_date: "சித்திரை 15", nakshatra: "உத்திரம் ", tithi: "த்வாதசி", events: ["ஒன்பதாம் நாள் காலை மீனாட்சி திருக்கல்யாணம்  & இரவு பட்டணப்பிரவேசம்", "ஸ்ரீ சுந்தரராஜப் பெருமாள் மூன்றாம் நாள் திருநாள்"] },
     29: { tamil_date: "சித்திரை 16", nakshatra: "அஸ்தம்", tithi: "த்ரயோதசி", events: ["பத்தாம் நாள் காலை ரதாரோஹணம் & இரவு சப்தாவரணம்", "ஸ்ரீ சுந்தரராஜப் பெருமாள் நான்காம் நாள் திருநாள்"] },
-    30: { tamil_date: "சித்திரை 17", nakshatra: "சித்திரை", tithi: "சதுர்த்தசி", events: ["தீர்த்தவாரி", "சுந்தரராஜப் பெருமாள் கள்ளர் திருக்கோலத்தில் வைகை எழுந்தருளல்", "நரசிம்ம ஜெயந்தி"] }
+    30: { tamil_date: "சித்திரை 17", nakshatra: "சித்திரை", tithi: "சதுர்த்தசி", events: ["பதினொன்றம் நாள் தீர்த்தவாரி", "சுந்தரராஜப் பெருமாள் கள்ளர் திருக்கோலத்தில் வைகை எழுந்தருளல்", "நரசிம்ம ஜெயந்தி"] }
 };
 
 // Process April data
@@ -360,7 +361,7 @@ const MAY_2026_DATA = {
     15: { tamil_date: "வைகாசி 1", nakshatra: "அஸ்வினி", tithi: "த்ரயோதசி", events: [] },
     16: { tamil_date: "வைகாசி 2", nakshatra: "பரணி", tithi: "அமாவாசை", events: ["அமாவாசை"] },
     17: { tamil_date: "வைகாசி 3", nakshatra: "கார்த்திகை", tithi: "த்விதியை", events: [] },
-    18: { tamil_date: "வைகாசி 4", nakshatra: "ரோகிணி", tithi: "த்ரிதியை", events: [] },
+    18: { tamil_date: "வைகாசி 4", nakshatra: "ரோகிணி", tithi: "த்ரிதியை", events: ["2018 & 2019 சின்ன அழகர்"] },
     19: { tamil_date: "வைகாசி 5", nakshatra: "மிருகசீரிடம்", tithi: "சதுர்த்தி", events: ["ஸ்ரீ வரதராஜப் பெருமாள் 224வது பிரமோற்சவம் ஆரம்பம் இரவு காப்புக் கட்டு", "சங்கடஹர சதுர்த்தி"] },
     20: { tamil_date: "வைகாசி 6", nakshatra: "திருவாதிரை", tithi: "பஞ்சமி", events: ["முதல் நாள் காலை த்வஜாரோஹணம் இரவு அன்ன வாகனம்"] },
     21: { tamil_date: "வைகாசி 7", nakshatra: "பூசம்", tithi: "ஷஷ்டி", events: ["இரண்டாம் நாள் காலை ரெங்கமன்னார் திருப்பல்லக்கு - இரவு சிம்ம வாகனம்", "ஷஷ்டி விரதம்"] },
@@ -372,7 +373,7 @@ const MAY_2026_DATA = {
     27: { tamil_date: "வைகாசி 13", nakshatra: "அஸ்தம்", tithi: "த்வாதசி", events: ["எட்டாம் நாள் மாலை வெண்ணைத்தாழி நவநீத கிருஷ்ணன் சேவை"] },
     28: { tamil_date: "வைகாசி 14", nakshatra: "சித்திரை", tithi: "த்ரயோதசி", events: ["ஒன்பதாம் நாள் அதிகாலை குதிரை வாகனம் - மாலை ரதாரோஹணம் - இரவு சப்தாவரணம்", "பிரதோஷம்", "பக்ரீத்"] },
     29: { tamil_date: "வைகாசி 15", nakshatra: "சுவாதி", tithi: "சதுர்த்தசி", events: ["பத்தாம் நாள் காலை தீர்த்தவாரி இரவு த்வஜாவரோஹணம்"] },
-    30: { tamil_date: "வைகாசி 16", nakshatra: "விசாகம்", tithi: "பௌர்ணமி", events: ["ஸ்ரீ வரதராஜப் பெருமாள் 119வது வசந்தோத்ஸவம் முதல் நாள் கள்ளர் திருக்கோலத்தில் வைகை எழுந்தருளல்", "பௌர்ணமி"] },
+    30: { tamil_date: "வைகாசி 16", nakshatra: "விசாகம்", tithi: "பௌர்ணமி", events: ["ஸ்ரீ வரதராஜப் பெருமாள் 119வது வசந்தோத்ஸவம் முதல் நாள் கள்ளர் திருக்கோலத்தில் வைகை எழுந்தருளல்"] },
     31: { tamil_date: "வைகாசி 17", nakshatra: "அனுஷம்", tithi: "பிரதமை", events: ["குதிரை வாகனம் வண்டியூர் திருவிழா"] }
 };
 
@@ -415,7 +416,7 @@ const JUNE_2026_DATA = {
     26: { tamil_date: "ஆனி 12", nakshatra: "விசாகம்", tithi: "த்வாதசி", events: ["பிரதோஷம்", "முஹர்ரம்"] },
     27: { tamil_date: "ஆனி 13", nakshatra: "அனுஷம்", tithi: "த்ரயோதசி", events: [] },
     28: { tamil_date: "ஆனி 14", nakshatra: "கேட்டை", tithi: "சதுர்த்தசி", events: [] },
-    29: { tamil_date: "ஆனி 15", nakshatra: "மூலம்", tithi: "பௌர்ணமி", events: ["பௌர்ணமி விரதம்", "சாவித்ரி விரதம்"] },
+    29: { tamil_date: "ஆனி 15", nakshatra: "மூலம்", tithi: "பௌர்ணமி", events: ["சாவித்ரி விரதம்"] },
     30: { tamil_date: "ஆனி 16", nakshatra: "பூராடம்", tithi: "பிரதமை", events: [] }
 };
 
@@ -484,7 +485,7 @@ const AUGUST_2026_DATA = {
     10: { tamil_date: "ஆடி 25", nakshatra: "திருவாதிரை", tithi: "த்வாதசி", events: [] },
     11: { tamil_date: "ஆடி 26", nakshatra: "புனர்பூசம்", tithi: "சதுர்த்தசி", events: ["பிரதோஷம்"] },
     12: { tamil_date: "ஆடி 27", nakshatra: "பூசம்", tithi: "அமாவாசை", events: ["மாத சிவராத்திரி"] },
-    13: { tamil_date: "ஆடி 28", nakshatra: "ஆயில்யம்", tithi: "பிரதமை", events: [""] },
+    13: { tamil_date: "ஆடி 28", nakshatra: "ஆயில்யம்", tithi: "பிரதமை", events: [] },
     14: { tamil_date: "ஆடி 29", nakshatra: "பூரம்", tithi: "த்விதியை", events: [] },
     15: { tamil_date: "ஆடி 30", nakshatra: "உத்திரம்", tithi: "த்ரிதியை", events: ["இந்திய சுதந்திர தினம்"] },
     16: { tamil_date: "ஆடி 31", nakshatra: "அஸ்தம்", tithi: "சதுர்த்தி", events: [] },
@@ -540,7 +541,7 @@ const SEPTEMBER_2026_DATA = {
     23: { tamil_date: "புரட்டாசி 6", nakshatra: "திருவோணம்", tithi: "த்வாதசி", events: [] },
     24: { tamil_date: "புரட்டாசி 7", nakshatra: "அவிட்டம்", tithi: "த்ரயோதசி", events: ["பிரதோஷம்"] },
     25: { tamil_date: "புரட்டாசி 8", nakshatra: "சதயம்", tithi: "சதுர்த்தி", events: ["ஆனந்த விரதம்"], image: anandhaviradham },
-    26: { tamil_date: "புரட்டாசி 9", nakshatra: "பூரட்டாதி", tithi: "பௌர்ணமி", events: ["பௌர்ணமி"] },
+    26: { tamil_date: "புரட்டாசி 9", nakshatra: "பூரட்டாதி", tithi: "பௌர்ணமி", events: [] },
     27: { tamil_date: "புரட்டாசி 10", nakshatra: "உத்திரட்டாதி", tithi: "பிரதமை", events: [] },
     28: { tamil_date: "புரட்டாசி 11", nakshatra: "ரேவதி", tithi: "த்விதியை", events: [] },
     29: { tamil_date: "புரட்டாசி 12", nakshatra: "அஸ்வினி", tithi: "த்ரிதியை", events: [] },
@@ -664,12 +665,12 @@ const DECEMBER_2026_DATA = {
     20: { tamil_date: "மார்கழி 5", nakshatra: "அஸ்வினி", tithi: "ஏகாதசி", events: ["பிரதோஷம்"] },
     21: { tamil_date: "மார்கழி 6", nakshatra: "பரணி", tithi: "த்வாதசி", events: ["மாத சிவராத்திரி"] },
     22: { tamil_date: "மார்கழி 7", nakshatra: "கார்த்திகை", tithi: "த்ரயோதசி", events: [] },
-    23: { tamil_date: "மார்கழி 8", nakshatra: "ரோகிணி", tithi: "சதுர்த்தசி", events: ["மார்கழி பௌர்ணமி", "திருவாதிரை"] },
+    23: { tamil_date: "மார்கழி 8", nakshatra: "ரோகிணி", tithi: "சதுர்த்தசி", events: ["திருவாதிரை"] },
     24: { tamil_date: "மார்கழி 9", nakshatra: "திருவாதிரை", tithi: "பௌர்ணமி", events: [] },
     25: { tamil_date: "மார்கழி 10", nakshatra: "புனர்பூசம்", tithi: "த்விதியை", events: ["கிறிஸ்துமஸ்"] },
     26: { tamil_date: "மார்கழி 11", nakshatra: "பூசம்", tithi: "த்ரிதியை", events: [] },
     27: { tamil_date: "மார்கழி 12", nakshatra: "ஆயில்யம்", tithi: "சதுர்த்தி", events: ["சங்கடஹர சதுர்த்தி"] },
-    28: { tamil_date: "மார்கழி 13", nakshatra: "மகம்", tithi: "பஞ்சமி", events: ["ஸ்ரீ வாரி சேவா குழு பஜனை"] },
+    28: { tamil_date: "மார்கழி 13", nakshatra: "மகம்", tithi: "பஞ்சமி", events: ["ஸ்ரீ வாரி சேவா குழு பொது பஜனை"] },
     29: { tamil_date: "மார்கழி 14", nakshatra: "பூரம்", tithi: "ஷஷ்டி", events: [] },
     30: { tamil_date: "மார்கழி 15", nakshatra: "உத்திரம்", tithi: "ஸப்தமி", events: [] },
     31: { tamil_date: "மார்கழி 16", nakshatra: "அஸ்தம்", tithi: "அஷ்டமி", events: [] }
@@ -920,7 +921,7 @@ function assignSpecialImages() {
                 // Also add Uriyadi Urchavam for next day
                 const gokulaDate = new Date(2026, parseInt(month), parseInt(day));
                 const uriyadiDate = new Date(gokulaDate);
-                uriyadiDate.setDate(uriyadiDate.getDate() + 1);
+                uriyadiDate.setDate(uriyadiDate.getDate() + 2);
 
                 const um = uriyadiDate.getMonth();
                 const ud = uriyadiDate.getDate();
@@ -1055,16 +1056,16 @@ function assignSpecialImages() {
     });
 
     if (vaikasiAmavasai) {
-        const vaganamImages = [day0, day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11, day12, day13, day14, day15, day16, day17, day18, day19];
+        const vaganamImages = [day0, day1, day2, day3, day4, day5, day6, day7, day8, day9, day10, day11, day12, day13, day14, day15, day16, day17, day18, day19, day20];
         // const vaganamNames = [
         //     "காப்புக் கட்டு", "அன்ன வாகனம்", "சிம்ம வாகனம்", "சேஷ வாகனம்", "கருட வாகனம்",
         //     "அனுமந்த வாகனம்", "யானை வாகனம்", "திருகல்யாணம்", "வெண்ணெய்தாழி",
         //     "குதிரை வாகனம்", "தீர்த்தவாரி", "இரவு வைகை எழுந்தருளல்", "குதிரை வாகனம்", "மன்டுக மகரிஷி மோட்சம்", "கருட வாகனம்", "அனுமந்த வாகனம்", "கள்ளர் திருக்கோலம் (கோவிலை நோக்கி)", "கண்ணாடி சேவை", "உற்சவ சாந்தி", "காந்தாடி உற்சவம்"
         // ];
 
-        for (let i = 0; i < 20; i++) {
+        for (let i = 0; i < 21; i++) {
             // Amavasai + 3 = Day 0 (May 16 + 3 = May 19), Day 1 starts at +4
-            const startDate = new Date(2026, vaikasiAmavasai.month, vaikasiAmavasai.day + 3 + i);
+            const startDate = new Date(2026, vaikasiAmavasai.month, vaikasiAmavasai.day + 2 + i);
             const m = startDate.getMonth();
             const d = startDate.getDate();
 
@@ -1073,8 +1074,8 @@ function assignSpecialImages() {
                 dayData.image = vaganamImages[i];
 
                 // Day 17 has 2 images for carousel
-                if (i === 17) {
-                    dayData.secondaryImage = day17_1;
+                if (i === 18) {
+                    dayData.secondaryImage = day18_1;
                 }
 
                 // if (!dayData.events.includes(vaganamNames[i])) {
@@ -1404,6 +1405,22 @@ function assignSpecialImages() {
             }
         }
     }
+
+    // Final pass: Add Pournami Purappadu event for all days with Punnim image (including Masi Magam)
+    Object.keys(PANCHANGAM_2026).forEach(month => {
+        const monthData = PANCHANGAM_2026[month];
+        Object.keys(monthData).forEach(day => {
+            const data = monthData[day];
+            // Check if image is punnim (covers masimagam too as it shares the same URL variable)
+            if (data.image === punnim) {
+                if (!data.events.includes("பௌர்ணமி புறப்பாடு")) {
+                    data.events.push("பௌர்ணமி புறப்பாடு");
+                    // Update festival string to reflect changes
+                    data.festival = data.events.join(", ");
+                }
+            }
+        });
+    });
 }
 
 // Run the automatic image assignment

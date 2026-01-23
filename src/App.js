@@ -2,10 +2,11 @@ import React, { useState, useEffect } from "react";
 import MonthCalendar from "./MonthCalendar";
 import Auth from "./Auth";
 import { isAuthenticated, getUser } from "./utils/auth";
-const sdkLogo = "https://ik.imagekit.io/hskzc0fkv/assests/SDK_Logo_Final.png";
+const sdkLogo = "https://ik.imagekit.io/hskzc0fkv/assests/SDK%20LG_DK%201.png";
 const introImgmobile = 'https://ik.imagekit.io/hskzc0fkv/Second%20Loading%20Mobile%20%20(5).jpg';
 const introImglaptop = 'https://ik.imagekit.io/hskzc0fkv/Second%20Loading%20Laptop%20%20(1).jpg'
 const credits = 'https://ik.imagekit.io/hskzc0fkv/assests/SDK%20Credits%20&%20Creators%20.jpg'
+const laptopcredits = 'https://ik.imagekit.io/hskzc0fkv/assests/SDK_Credits%20&%20Creators%20%20(Website).jpg'
 
 function App() {
   const [step, setStep] = useState('loading'); // 'loading', 'intro', 'auth', 'calendar', 'exiting', 'credits'
@@ -316,7 +317,12 @@ function App() {
         <img
           src={credits}
           alt="Credits"
-          className="max-w-full max-h-full object-contain animate-in fade-in zoom-in-95 duration-500"
+          className="max-w-full max-h-full object-contain animate-in fade-in zoom-in-95 duration-500 md:hidden"
+        />
+        <img
+          src={laptopcredits}
+          alt="Credits"
+          className="max-w-full max-h-full object-contain animate-in fade-in zoom-in-95 duration-500 hidden md:block"
         />
       </div>
     );
