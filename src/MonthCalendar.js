@@ -4,19 +4,19 @@ import { getRahukalamData } from "./rahukalam";
 
 
 // Import month images from ImageKit CDN
-const januaryImg = "https://ik.imagekit.io/hskzc0fkv/assests/IMG-20250611-WA0085.jpg";
-const februaryImg = "https://ik.imagekit.io/hskzc0fkv/assests/IMG-20250531-WA0189(1).jpg";
-const marchImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_21_Singam_Vaganam.jpg';
-const aprilImg = 'https://ik.imagekit.io/hskzc0fkv/assests/IMG_20260110_124508.jpg';
-const mayImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_23_Garuda_Vaganam.jpg';
-const juneImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_24_Anumantha_Vaganam.jpg';
-const julyImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_25_Yanai_Vaganam.jpg';
-const augustImg = 'https://ik.imagekit.io/hskzc0fkv/assests/IMG_20260110_124325.jpg';
-const septemberImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May-27?updatedAt=1767456631432';
-const octoberImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_28_Kudurai_Mrg.jpg';
-const novemberImg = 'https://ik.imagekit.io/hskzc0fkv/assests/May_29_Therthavaari.jpg';
-const decemberImg = 'https://ik.imagekit.io/hskzc0fkv/assests/Dec_Month.jpg';
-const logo = 'https://ik.imagekit.io/hskzc0fkv/assests/SDK_Logo_Final.png';
+const januaryImg = "https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/IMG-20250611-WA0085.jpg";
+const februaryImg = "https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/IMG-20250531-WA0189(1).jpg";
+const marchImg = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_21_Singam_Vaganam.jpg';
+const aprilImg = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/IMG_20260110_124508.jpg';
+const mayImg = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_23_Garuda_Vaganam.jpg';
+const juneImg = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_24_Anumantha_Vaganam.jpg';
+const julyImg = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_25_Yanai_Vaganam.jpg';
+const augustImg = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/IMG_20260110_124325.jpg';
+const septemberImg = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May-27?updatedAt=1767456631432';
+const octoberImg = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_28_Kudurai_Mrg.jpg';
+const novemberImg = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_29_Therthavaari.jpg';
+const decemberImg = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Dec_Month.jpg';
+const logo = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/SDK_Logo_Final.png';
 
 const MONTH_NAMES = [
     "January", "February", "March", "April", "May", "June",

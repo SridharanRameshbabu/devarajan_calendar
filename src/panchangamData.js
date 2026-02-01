@@ -2,137 +2,137 @@
 // Data provided directly in Tamil for accurate display
 
 // Using ImageKit CDN for optimized image loading
-const andal_malai = 'https://ik.imagekit.io/hskzc0fkv/assests/andal_malai_matram.jpg';
-const radha_sapthami = 'https://ik.imagekit.io/hskzc0fkv/assests/Jan_25_RathaSapthami.jpg';
-const vidai_atru = 'https://ik.imagekit.io/hskzc0fkv/assests/IMG_20260115_184442.jpg';
-const punnim = 'https://ik.imagekit.io/hskzc0fkv/assests/Punnim.jpg';
-const unjal_sevai = 'https://ik.imagekit.io/hskzc0fkv/assests/Unjal_Sevai_Final.jpg';
+const andal_malai = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/andal_malai_matram.jpg';
+const radha_sapthami = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Jan_25_RathaSapthami.jpg';
+const vidai_atru = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/IMG_20260115_184442.jpg';
+const punnim = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Punnim.jpg';
+const unjal_sevai = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Unjal_Sevai_Final.jpg';
 
 // Vaikasi Vaganam Images
-const day0 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_18_Chinna_Alzhagar.jpg?updatedAt=1769178433673'
-const day1 = 'https://ik.imagekit.io/hskzc0fkv/May_19_KappuKattu.jpg'
-const day2 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_20_Annam_Vaganam.jpg';
-const day3 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_21_Singam_Vaganam.jpg';
-const day4 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_22_Sesa_Vaganam.jpg';
-const day5 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_23_Garuda_Vaganam.jpg';
-const day6 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_24_Anumantha_Vaganam.jpg';
-const day7 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_25_Yanai_Vaganam.jpg';
-const day8 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_26_Thirukallayanam(2).jpg';
-const day9 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_27_Vennaithali(1).jpg';
-const day10 = 'https://ik.imagekit.io/hskzc0fkv/assests/WhatsApp%20Image%202026-01-03%20at%2015.17.53.jpeg';
-const day11 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_29_Therthavaari.jpg';
-const day12 = 'https://ik.imagekit.io/hskzc0fkv/assests/IMG-20250611-WA0085.jpg';
-const day13 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_31_Kuthrai.jpg?updatedAt=1767874152472';
-const day14 = 'https://ik.imagekit.io/hskzc0fkv/assests/Jun_1_Day_3.jpg';
-const day15 = 'https://ik.imagekit.io/hskzc0fkv/assests/Jun_2_Day_4.jpg';
-const day16 = 'https://ik.imagekit.io/hskzc0fkv/assests/Jun_3_Day_5.jpg';
-const day17 = 'https://ik.imagekit.io/hskzc0fkv/assests/Dec_Month.jpg';
-const day18 = 'https://ik.imagekit.io/hskzc0fkv/assests/June_5_Kannadi_Sevai.jpg'
-const day18_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/June_5_Kannadi_Sevai2.jpg'
-const day19 = 'https://ik.imagekit.io/hskzc0fkv/assests/June_6_Urchava_Santhi.jpg'
-const day20 = 'https://ik.imagekit.io/hskzc0fkv/assests/June_7_Kanthavadi_Urchavam.jpg'
-const masimagam = 'https://ik.imagekit.io/hskzc0fkv/assests/Punnim.jpg';
-const ramanavami = 'https://ik.imagekit.io/hskzc0fkv/assests/March_27_Rama_Navami.jpg';
-const ramanavami_kalyanam = 'https://ik.imagekit.io/hskzc0fkv/assests/March_28_Marraige.jpg'
-const ramseetha_pallakku = 'https://ik.imagekit.io/hskzc0fkv/assests/IMG_20260109_230001.jpg'
-const panguni_thirukalyanam = 'https://ik.imagekit.io/hskzc0fkv/assests/Panguni_Uthiram(S)_Thirukalyanan.jpg';
-const panguni_uthiram = 'https://ik.imagekit.io/hskzc0fkv/assests/_1010332.jpg'
-const panguni_dhani = 'https://ik.imagekit.io/hskzc0fkv/assests/Panguni_Uthiram_D5.jpg';
-const tamilnewyear = 'https://ik.imagekit.io/hskzc0fkv/assests/Tamil_New_Year.jpg';
-const gajendra_motcham = 'https://ik.imagekit.io/hskzc0fkv/assests/Gajendra%20Mokcham.jpg';
-const ganupaari = 'https://ik.imagekit.io/hskzc0fkv/assests/Aani_Kettai(S)_Sestaabhisegam.jpg'
-const jestabisekam = 'https://ik.imagekit.io/hskzc0fkv/assests/Aani_Kettai(S)_Sestaabhisegam.jpg'
-const anandhaviradham = 'https://ik.imagekit.io/hskzc0fkv/assests/IMG_20260110_124508.jpg'
-const vaigundam = 'https://ik.imagekit.io/hskzc0fkv/assests/IMG_20251229_222245.jpg'
+const day0 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_18_Chinna_Alzhagar.jpg?updatedAt=1769178433673'
+const day1 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_19_KappuKattu.jpg'
+const day2 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_20_Annam_Vaganam.jpg';
+const day3 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_21_Singam_Vaganam.jpg';
+const day4 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_22_Sesa_Vaganam.jpg';
+const day5 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_23_Garuda_Vaganam.jpg';
+const day6 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_24_Anumantha_Vaganam.jpg';
+const day7 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_25_Yanai_Vaganam.jpg';
+const day8 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_26_Thirukallayanam(2).jpg';
+const day9 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_27_Vennaithali(1).jpg';
+const day10 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/WhatsApp%20Image%202026-01-03%20at%2015.17.53.jpeg';
+const day11 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_29_Therthavaari.jpg';
+const day12 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/IMG-20250611-WA0085.jpg';
+const day13 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_31_Kuthrai.jpg?updatedAt=1767874152472';
+const day14 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Jun_1_Day_3.jpg';
+const day15 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Jun_2_Day_4.jpg';
+const day16 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Jun_3_Day_5.jpg';
+const day17 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Dec_Month.jpg';
+const day18 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/June_5_Kannadi_Sevai.jpg'
+const day18_1 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/June_5_Kannadi_Sevai2.jpg'
+const day19 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/June_6_Urchava_Santhi.jpg'
+const day20 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/June_7_Kanthavadi_Urchavam.jpg'
+const masimagam = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Punnim.jpg';
+const ramanavami = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/March_27_Rama_Navami.jpg';
+const ramanavami_kalyanam = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/March_28_Marraige.jpg'
+const ramseetha_pallakku = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/IMG_20260109_230001.jpg'
+const panguni_thirukalyanam = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Panguni_Uthiram(S)_Thirukalyanan.jpg';
+const panguni_uthiram = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/_1010332.jpg'
+const panguni_dhani = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Panguni_Uthiram_D5.jpg';
+const tamilnewyear = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Tamil_New_Year.jpg';
+const gajendra_motcham = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Gajendra%20Mokcham.jpg';
+const ganupaari = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Aani_Kettai(S)_Sestaabhisegam.jpg'
+const jestabisekam = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Aani_Kettai(S)_Sestaabhisegam.jpg'
+const anandhaviradham = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/IMG_20260110_124508.jpg'
+const vaigundam = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/IMG_20251229_222245.jpg'
 
 //Pmk chithirai
-const pmk_day_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-1.jpg';
-const pmk_day_2 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-2.jpg';
-const pmk_day_3 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-3.jpg';
-const pmk_day_4 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-4.jpg';
-const pmk_day_5 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-5.jpg';
-const pmk_day_6 = 'https://ik.imagekit.io/hskzc0fkv/assests/May_1.jpg';
-const pmk_day_7 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-7.jpg';
-const pmk_day_8 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-8.jpg';
-const pmk_day_9 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-9.jpg';
-const pmk_day_10 = 'https://ik.imagekit.io/hskzc0fkv/assests/Pmk-day-10.jpg';
+const pmk_day_1 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Pmk-day-1.jpg';
+const pmk_day_2 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Pmk-day-2.jpg';
+const pmk_day_3 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Pmk-day-3.jpg';
+const pmk_day_4 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Pmk-day-4.jpg';
+const pmk_day_5 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Pmk-day-5.jpg';
+const pmk_day_6 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/May_1.jpg';
+const pmk_day_7 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Pmk-day-7.jpg';
+const pmk_day_8 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Pmk-day-8.jpg';
+const pmk_day_9 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Pmk-day-9.jpg';
+const pmk_day_10 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Pmk-day-10.jpg';
 const pmk_day_10_1 = 'https://ik.imagekit.io/hskzc0fkv/WhatsApp%20Image%202026-01-08%20at%2002.21.55.jpeg'
-const pmk_day_11 = 'https://ik.imagekit.io/hskzc0fkv/assests/14.%20IMG-20250517-WA0017.jpg'
+const pmk_day_11 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/14.%20IMG-20250517-WA0017.jpg'
 
 //Pmk aadi
-const aadi1 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi1.jpg';
-const aadi2 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi2.jpg';
-const aadi3 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi3.jpg';
-const aadi4 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi4.jpg';
-const aadi5 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi5.jpg';
-const aadi6 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi7.jpg';
-const aadi7 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi6.jpg';
-const aadi8 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi8.jpeg';
-const aadi9 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi9.jpeg';
-const aadi10 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi10.jpg';
+const aadi1 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/aadi1.jpg';
+const aadi2 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/aadi2.jpg';
+const aadi3 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/aadi3.jpg';
+const aadi4 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/aadi4.jpg';
+const aadi5 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/aadi5.jpg';
+const aadi6 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/aadi7.jpg';
+const aadi7 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/aadi6.jpg';
+const aadi8 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/aadi8.jpeg';
+const aadi9 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/aadi9.jpeg';
+const aadi10 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/aadi10.jpg';
 
 const aadilastvelli = 'https://ik.imagekit.io/hskzc0fkv/Aadi%20last%20Friday.jpg'
 const aadiamavasai = 'https://ik.imagekit.io/hskzc0fkv/aadiamavasai.jpeg'
 
-const karthigai_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/Karthikai_1%20(1).jpg'
+const karthigai_1 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Karthikai_1%20(1).jpg'
 
-const vijaya_dhasami = 'https://ik.imagekit.io/hskzc0fkv/assests/Vijayadhasami.jpg';
+const vijaya_dhasami = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Vijayadhasami.jpg';
 
-const mandala_poojai = 'https://ik.imagekit.io/hskzc0fkv/assests/mandala%20abhisegam.jpg';
-const srivari_bajanai = 'https://ik.imagekit.io/hskzc0fkv/assests/Srivari%20bhajanai.jpg';
+const mandala_poojai = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/mandala%20abhisegam.jpg';
+const srivari_bajanai = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Srivari%20bhajanai.jpg';
 
-const srinivasan = 'https://ik.imagekit.io/hskzc0fkv/assests/108_Srinivasan.jpg';
-const srinivasan_2 = 'https://ik.imagekit.io/hskzc0fkv/assests/Srinivasan_108.jpg';
+const srinivasan = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/108_Srinivasan.jpg';
+const srinivasan_2 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Srinivasan_108.jpg';
 
-const thirumangai_alvar = 'https://ik.imagekit.io/hskzc0fkv/assests/Karthigai_Chitrai(S)_Thirumangai_Azlvar.jpg';
-const ramanujar_jeyanthi = 'https://ik.imagekit.io/hskzc0fkv/assests/Ramanujar_Jayanthi.jpg'
+const thirumangai_alvar = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Karthigai_Chitrai(S)_Thirumangai_Azlvar.jpg';
+const ramanujar_jeyanthi = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Ramanujar_Jayanthi.jpg'
 const aadipooram = 'https://ik.imagekit.io/hskzc0fkv/Aadipooram.jpg'
-const karthigai = 'https://ik.imagekit.io/hskzc0fkv/assests/Karthigai.jpg?updatedAt=1767874152540'
-const diwali = 'https://ik.imagekit.io/hskzc0fkv/assests/Diwali.jpg'
-const thaipusam = 'https://ik.imagekit.io/hskzc0fkv/assests/Feb_1_Thaipusam.jpg'
-const chakaram = 'https://ik.imagekit.io/hskzc0fkv/assests/Chakarrathalvar_Jeyathi.jpg'
-const diwali_garudan = 'https://ik.imagekit.io/hskzc0fkv/assests/Aani_Kettai(S)_Sestaabhisegam.jpg'
-const laksh_arjanai = 'https://ik.imagekit.io/hskzc0fkv/assests/Laksh_Archanai.png'
-const uriyadi = 'https://ik.imagekit.io/hskzc0fkv/assests/Uriyadi%20urchavam.jpg'
-const krishna_jayanthi = 'https://ik.imagekit.io/hskzc0fkv/assests/Krishna_Jeyathi.jpg'
+const karthigai = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Karthigai.jpg?updatedAt=1767874152540'
+const diwali = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Diwali.jpg'
+const thaipusam = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Feb_1_Thaipusam.jpg'
+const chakaram = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Chakarrathalvar_Jeyathi.jpg'
+const diwali_garudan = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Aani_Kettai(S)_Sestaabhisegam.jpg'
+const laksh_arjanai = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Laksh_Archanai.png'
+const uriyadi = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Uriyadi%20urchavam.jpg'
+const krishna_jayanthi = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Krishna_Jeyathi.jpg'
 
 //Pmk Eswaran kovil
 
-const pmk_eswaran_kovil_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/Day-1Moring.jpg?updatedAt=1767541063935'
-const pmk_eswaran_kovil_2 = 'https://ik.imagekit.io/hskzc0fkv/assests/Day-2.2.jpg?updatedAt=1767541062545'
-const pmk_eswaran_kovil_3 = 'https://ik.imagekit.io/hskzc0fkv/assests/Day3.1.jpg?updatedAt=1767541164053'
-const pmk_eswaran_kovil_3_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/Day3.2.jpg?updatedAt=1767541162696'
-const pmk_eswaran_kovil_4 = 'https://ik.imagekit.io/hskzc0fkv/assests/Day4.1.jpg?updatedAt=1767541157029'
-const pmk_eswaran_kovil_4_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/Day4.2.jpg?updatedAt=1767541165313'
-const pmk_eswaran_kovil_5 = 'https://ik.imagekit.io/hskzc0fkv/assests/Day5.2.jpg?updatedAt=1767541161003'
-const pmk_eswaran_kovil_5_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/Day5.1.jpg?updatedAt=1767541162481'
-const pmk_eswaran_kovil_6 = 'https://ik.imagekit.io/hskzc0fkv/assests/Day6.2.jpg?updatedAt=1767541153079'
-// const pmk_eswaran_kovil_6_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/Day6.1.jpg?updatedAt=1767541165013'
-const pmk_eswaran_kovil_7 = 'https://ik.imagekit.io/hskzc0fkv/assests/Day-7.2.jpg?updatedAt=1767541072485'
-// const pmk_eswaran_kovil_7_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/Day-7.1.jpg?updatedAt=1767541077984'
-// const pmk_eswaran_kovil_7_2 = 'https://ik.imagekit.io/hskzc0fkv/assests/Day7.3.jpg?updatedAt=1767541171452'
-const pmk_eswaran_kovil_8 = 'https://ik.imagekit.io/hskzc0fkv/assests/Day8.0.jpg?updatedAt=1767541175533'
-const pmk_eswaran_kovil_9 = 'https://ik.imagekit.io/hskzc0fkv/assests/Day-9.jpg?updatedAt=1767541075756'
-const pmk_eswaran_kovil_10 = 'https://ik.imagekit.io/hskzc0fkv/assests/Day10.1.jpg?updatedAt=1767541068105'
-// const pmk_eswaran_kovil_10_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/Day10.2.jpg?updatedAt=1767541139815'
-const pmk_eswaran_kovil_11 = 'https://ik.imagekit.io/hskzc0fkv/assests/aadi10.jpg'
+const pmk_eswaran_kovil_1 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Day-1Moring.jpg?updatedAt=1767541063935'
+const pmk_eswaran_kovil_2 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Day-2.2.jpg?updatedAt=1767541062545'
+const pmk_eswaran_kovil_3 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Day3.1.jpg?updatedAt=1767541164053'
+const pmk_eswaran_kovil_3_1 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Day3.2.jpg?updatedAt=1767541162696'
+const pmk_eswaran_kovil_4 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Day4.1.jpg?updatedAt=1767541157029'
+const pmk_eswaran_kovil_4_1 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Day4.2.jpg?updatedAt=1767541165313'
+const pmk_eswaran_kovil_5 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Day5.2.jpg?updatedAt=1767541161003'
+const pmk_eswaran_kovil_5_1 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Day5.1.jpg?updatedAt=1767541162481'
+const pmk_eswaran_kovil_6 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Day6.2.jpg?updatedAt=1767541153079'
+// const pmk_eswaran_kovil_6_1 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Day6.1.jpg?updatedAt=1767541165013'
+const pmk_eswaran_kovil_7 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Day-7.2.jpg?updatedAt=1767541072485'
+// const pmk_eswaran_kovil_7_1 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Day-7.1.jpg?updatedAt=1767541077984'
+// const pmk_eswaran_kovil_7_2 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Day7.3.jpg?updatedAt=1767541171452'
+const pmk_eswaran_kovil_8 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Day8.0.jpg?updatedAt=1767541175533'
+const pmk_eswaran_kovil_9 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Day-9.jpg?updatedAt=1767541075756'
+const pmk_eswaran_kovil_10 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Day10.1.jpg?updatedAt=1767541068105'
+// const pmk_eswaran_kovil_10_1 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Day10.2.jpg?updatedAt=1767541139815'
+const pmk_eswaran_kovil_11 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/aadi10.jpg'
 
 
-const navarathri_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar_Srinivasan2.jpg'
-const navarathri_2 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar%20(1).jpg'
-const navarathri_3 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar%20(2).jpg'
-const navarathri_4 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar(3).jpg'
-const navarathri_5 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar_Oct15.jpg'
-const navarathri_6 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar%20(5).jpg'
-const navarathri_7 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar%20(6).jpg'
-const navarathri_8 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar%20(7).jpg'
-const navarathri_9 = 'https://ik.imagekit.io/hskzc0fkv/assests/Urchavar_Srinivasan.jpg'
+const navarathri_1 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Urchavar_Srinivasan2.jpg'
+const navarathri_2 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Urchavar%20(1).jpg'
+const navarathri_3 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Urchavar%20(2).jpg'
+const navarathri_4 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Urchavar(3).jpg'
+const navarathri_5 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Urchavar_Oct15.jpg'
+const navarathri_6 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Urchavar%20(5).jpg'
+const navarathri_7 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Urchavar%20(6).jpg'
+const navarathri_8 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Urchavar%20(7).jpg'
+const navarathri_9 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Urchavar_Srinivasan.jpg'
 
-const puratasi_1 = 'https://ik.imagekit.io/hskzc0fkv/assests/Purattachi_1.jpg'
-const puratasi_2 = 'https://ik.imagekit.io/hskzc0fkv/assests/Purattachi_2.jpg'
-const puratasi_3 = 'https://ik.imagekit.io/hskzc0fkv/assests/Purattachi_3.jpg'
-const puratasi_4 = 'https://ik.imagekit.io/hskzc0fkv/assests/Purattachi_4.jpg'
-const nadanagopal = 'https://ik.imagekit.io/hskzc0fkv/assests/IMG_20260110_205907.jpg'
+const puratasi_1 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Purattachi_1.jpg'
+const puratasi_2 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Purattachi_2.jpg'
+const puratasi_3 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Purattachi_3.jpg'
+const puratasi_4 = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/Purattachi_4.jpg'
+const nadanagopal = 'https://cdn.jsdelivr.net/gh/sridevarajankuzhumamems/SDK-CALENDAR-IMAGES/downloads/IMG_20260110_205907.jpg'
 
 // Day types for color highlighting
 export const DAY_TYPES = {
