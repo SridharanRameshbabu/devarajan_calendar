@@ -714,10 +714,13 @@ function assignSpecialImages() {
 
             // Masi Magam Image Assignment
             if (data.tamil_date.startsWith("மாசி") && data.nakshatra === "மகம்") {
-                data.image = masimagam;
-                if (data.events && !data.events.includes("மாசி மகம்")) {
-                    data.events.push("மாசி மகம்");
-                    data.festival = data.events.join(", ");
+                // Skip March 3rd for Masi Magam image
+                if (!(parseInt(month) === 2 && parseInt(day) === 3)) {
+                    data.image = masimagam;
+                    if (data.events && !data.events.includes("மாசி மகம்")) {
+                        data.events.push("மாசி மகம்");
+                        data.festival = data.events.join(", ");
+                    }
                 }
             }
 
@@ -1408,9 +1411,20 @@ function assignSpecialImages() {
         const monthData = PANCHANGAM_2026[month];
         Object.keys(monthData).forEach(day => {
             const data = monthData[day];
-            // Skip April (month 3), August (month 7), and May 30th for Pournami images
-            if (parseInt(month) === 3 || parseInt(month) === 7 || (parseInt(month) === 4 && parseInt(day) === 30)) {
+            // Skip April (month 3), August (month 7), May 30th, and March 3rd for Pournami images
+            if (parseInt(month) === 3 || parseInt(month) === 7 || (parseInt(month) === 4 && parseInt(day) === 30) || (parseInt(month) === 2 && parseInt(day) === 3)) {
                 return;
+            }
+            // Special case: Assign Pournami to March 2nd (even though March 3rd is actual Pournami)
+            if (parseInt(month) === 2 && parseInt(day) === 2) {
+                if (data.image) {
+                    if (data.image !== punnim) {
+                        data.leftImage = punnim;
+                        data.secondaryImage = punnim;
+                    }
+                } else {
+                    data.image = punnim;
+                }
             }
             // Add punnim image for Pournami days (priority to existing image, add as secondary if exists)
             if (data.tithi === "பௌர்ணமி" || (data.events && data.events.some(e => e.includes("பௌர்ணமி")))) {
@@ -1431,9 +1445,16 @@ function assignSpecialImages() {
         const monthData = PANCHANGAM_2026[month];
         Object.keys(monthData).forEach(day => {
             const data = monthData[day];
-            // Skip April (month 3), August (month 7), and May 30th for Pournami events
-            if (parseInt(month) === 3 || parseInt(month) === 7 || (parseInt(month) === 4 && parseInt(day) === 30)) {
+            // Skip April (month 3), August (month 7), May 30th, and March 3rd for Pournami events
+            if (parseInt(month) === 3 || parseInt(month) === 7 || (parseInt(month) === 4 && parseInt(day) === 30) || (parseInt(month) === 2 && parseInt(day) === 3)) {
                 return;
+            }
+            // Special case: Add Pournami event to March 2nd (even though March 3rd is actual Pournami)
+            if (parseInt(month) === 2 && parseInt(day) === 2) {
+                if (!data.events.includes("பௌர்ணமி புறப்பாடு") && !data.events.includes("ஸ்ரீ வரதராஜப் பெருமாள் பௌர்ணமி புறப்பாடு")) {
+                    data.events.push("பௌர்ணமி புறப்பாடு");
+                    data.festival = data.events.join(", ");
+                }
             }
             // Add "பௌர்ணமி புறப்பாடு" event for all Pournami days
             // This includes days where punnim is primary, secondary, or left image
