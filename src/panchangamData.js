@@ -1403,14 +1403,13 @@ function assignSpecialImages() {
         }
     }
 
-    // Second pass: Assign Pournami images only for Chithirai and Aadi months
+    // Second pass: Assign Pournami images after all other festivals are assigned
     Object.keys(PANCHANGAM_2026).forEach(month => {
         const monthData = PANCHANGAM_2026[month];
         Object.keys(monthData).forEach(day => {
             const data = monthData[day];
-            // Only assign Pournami images for Chithirai and Aadi Tamil months
-            const tamilMonth = data.tamil_date.split(" ")[0];
-            if (tamilMonth !== "சித்திரை" && tamilMonth !== "ஆடி") {
+            // Skip April (month 3), August (month 7), and May 30th for Pournami images
+            if (parseInt(month) === 3 || parseInt(month) === 7 || (parseInt(month) === 4 && parseInt(day) === 30)) {
                 return;
             }
             // Add punnim image for Pournami days (priority to existing image, add as secondary if exists)
@@ -1427,20 +1426,25 @@ function assignSpecialImages() {
         });
     });
 
-    // Final pass: Add Sri Varadharajaperumal Pournami Purappadu event for Chithirai and Aadi months only
+    // Final pass: Add Pournami Purappadu event for all Pournami days (including Masi Magam)
     Object.keys(PANCHANGAM_2026).forEach(month => {
         const monthData = PANCHANGAM_2026[month];
         Object.keys(monthData).forEach(day => {
             const data = monthData[day];
-            // Only add Pournami event for Chithirai and Aadi Tamil months
-            const tamilMonth = data.tamil_date.split(" ")[0];
-            if (tamilMonth !== "சித்திரை" && tamilMonth !== "ஆடி") {
+            // Skip April (month 3), August (month 7), and May 30th for Pournami events
+            if (parseInt(month) === 3 || parseInt(month) === 7 || (parseInt(month) === 4 && parseInt(day) === 30)) {
                 return;
             }
-            // Add "ஸ்ரீ வரதராஜப் பெருமாள் பௌர்ணமி புறப்பாடு" event for Pournami days
+            // Add "பௌர்ணமி புறப்பாடு" event for all Pournami days
+            // This includes days where punnim is primary, secondary, or left image
             if (data.tithi === "பௌர்ணமி" || (data.events && data.events.some(e => e.includes("பௌர்ணமி")))) {
-                if (!data.events.includes("ஸ்ரீ வரதராஜப் பெருமாள் பௌர்ணமி புறப்பாடு")) {
-                    data.events.push("ஸ்ரீ வரதராஜப் பெருமாள் பௌர்ணமி புறப்பாடு");
+                // Special case for May 1st and July 29th - use Sri Varadharajaperumal event
+                const eventText = ((parseInt(month) === 4 && parseInt(day) === 1) || (parseInt(month) === 6 && parseInt(day) === 29))
+                    ? "ஸ்ரீ வரதராஜப் பெருமாள் பௌர்ணமி புறப்பாடு"
+                    : "பௌர்ணமி புறப்பாடு";
+
+                if (!data.events.includes(eventText) && !data.events.includes("பௌர்ணமி புறப்பாடு") && !data.events.includes("ஸ்ரீ வரதராஜப் பெருமாள் பௌர்ணமி புறப்பாடு")) {
+                    data.events.push(eventText);
                     // Update festival string to reflect changes
                     data.festival = data.events.join(", ");
                 }
