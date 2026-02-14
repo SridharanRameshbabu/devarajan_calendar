@@ -624,7 +624,7 @@ const NOVEMBER_2026_DATA = {
     21: { tamil_date: "கார்த்திகை 5", nakshatra: "உத்திரட்டாதி", tithi: "ஏகாதசி", events: ["பிரதோஷம்"] },
     22: { tamil_date: "கார்த்திகை 6", nakshatra: "அஸ்வினி", tithi: "த்ரயோதசி", events: [] },
     23: { tamil_date: "கார்த்திகை 7", nakshatra: "பரணி", tithi: "சதுர்த்தசி", events: [] },
-    24: { tamil_date: "கார்த்திகை 8", nakshatra: "கார்த்திகை", tithi: "பஞ்சமி", events: ["பிரதோஷம்"] },
+    24: { tamil_date: "கார்த்திகை 8", nakshatra: "கார்த்திகை", tithi: "பௌர்ணமி", events: ["பிரதோஷம்"] },
     25: { tamil_date: "கார்த்திகை 9", nakshatra: "ரோகிணி", tithi: "பிரதமை", events: [] },
     26: { tamil_date: "கார்த்திகை 10", nakshatra: "மிருகசீரிடம்", tithi: "த்விதியை", events: [] },
     27: { tamil_date: "கார்த்திகை 11", nakshatra: "திருவாதிரை", tithi: "த்ரிதியை", events: [] },
@@ -1408,6 +1408,10 @@ function assignSpecialImages() {
         const monthData = PANCHANGAM_2026[month];
         Object.keys(monthData).forEach(day => {
             const data = monthData[day];
+            // Skip April (month 3) and August (month 7) for Pournami images
+            if (parseInt(month) === 3 || parseInt(month) === 7) {
+                return;
+            }
             // Add punnim image for Pournami days (priority to existing image, add as secondary if exists)
             if (data.tithi === "பௌர்ணமி" || (data.events && data.events.some(e => e.includes("பௌர்ணமி")))) {
                 if (data.image) {
@@ -1422,13 +1426,18 @@ function assignSpecialImages() {
         });
     });
 
-    // Final pass: Add Pournami Purappadu event for all days with Punnim image (including Masi Magam)
+    // Final pass: Add Pournami Purappadu event for all Pournami days (including Masi Magam)
     Object.keys(PANCHANGAM_2026).forEach(month => {
         const monthData = PANCHANGAM_2026[month];
         Object.keys(monthData).forEach(day => {
             const data = monthData[day];
-            // Check if image is punnim (covers masimagam too as it shares the same URL variable)
-            if (data.image === punnim) {
+            // Skip April (month 3) and August (month 7) for Pournami events
+            if (parseInt(month) === 3 || parseInt(month) === 7) {
+                return;
+            }
+            // Add "பௌர்ணமி புறப்பாடு" event for all Pournami days
+            // This includes days where punnim is primary, secondary, or left image
+            if (data.tithi === "பௌர்ணமி" || (data.events && data.events.some(e => e.includes("பௌர்ணமி")))) {
                 if (!data.events.includes("பௌர்ணமி புறப்பாடு")) {
                     data.events.push("பௌர்ணமி புறப்பாடு");
                     // Update festival string to reflect changes
